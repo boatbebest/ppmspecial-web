@@ -3,22 +3,20 @@
     @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
 
     :root {
-        --color-primary: #0a2540; /* Dark Navy */
-        --color-accent: #0066ff; /* Electric Blue */
+        --color-primary: #0a2540; 
+        --color-accent: #0066ff; 
         --color-accent-hover: #0052cc;
         --color-bg: #f8f9fa;
         --color-text: #333333;
         --color-text-light: #666666;
         --color-white: #ffffff;
+        --color-line: #00B900;
+        --color-msg: #0084FF;
         --radius: 12px;
         --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
         font-family: 'Kanit', sans-serif;
@@ -42,13 +40,13 @@
         background: rgba(10, 37, 64, 0.0);
     }
     nav.scrolled {
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     }
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 700;
         color: var(--color-white);
         display: flex;
@@ -56,14 +54,10 @@
         gap: 10px;
         transition: var(--transition);
     }
-    nav.scrolled .logo, nav.scrolled .nav-links a {
-        color: var(--color-primary);
-    }
-    .nav-links {
-        display: flex;
-        gap: 30px;
-        list-style: none;
-    }
+    nav.scrolled .logo, nav.scrolled .nav-links a { color: var(--color-primary); }
+    
+    .nav-right { display: flex; align-items: center; gap: 30px; }
+    .nav-links { display: flex; gap: 25px; list-style: none; }
     .nav-links a {
         color: var(--color-white);
         text-decoration: none;
@@ -71,21 +65,40 @@
         font-size: 1rem;
         transition: var(--transition);
     }
-    .nav-links a:hover {
-        color: var(--color-accent) !important;
+    .nav-links a:hover { color: var(--color-accent) !important; }
+
+    /* Language Switcher */
+    .lang-switch {
+        display: flex;
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: var(--transition);
     }
-    .nav-btn {
-        background: var(--color-accent);
-        color: var(--color-white) !important;
-        padding: 8px 20px;
-        border-radius: 30px;
+    nav.scrolled .lang-switch {
+        background: var(--color-bg);
+        border-color: #e2e8f0;
     }
+    .lang-btn {
+        padding: 6px 12px;
+        border: none;
+        background: transparent;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        color: var(--color-white);
+        transition: var(--transition);
+        font-family: 'Kanit', sans-serif;
+    }
+    nav.scrolled .lang-btn { color: var(--color-text-light); }
+    .lang-btn.active { background: var(--color-accent); color: var(--color-white) !important; }
 
     /* --- Hero Section --- */
     .hero {
         height: 100vh;
-        min-height: 600px;
-        background: linear-gradient(135deg, rgba(10,37,64,0.95) 0%, rgba(10,37,64,0.8) 100%), 
+        min-height: 650px;
+        background: linear-gradient(135deg, rgba(10,37,64,0.95) 0%, rgba(10,37,64,0.85) 100%), 
                     radial-gradient(circle at 80% 20%, rgba(0,102,255,0.3) 0%, transparent 40%);
         background-color: var(--color-primary);
         display: flex;
@@ -106,57 +119,37 @@
         width: fit-content;
     }
     .hero h1 {
-        font-size: clamp(2.5rem, 5vw, 4.5rem);
-        line-height: 1.1;
+        font-size: clamp(2.5rem, 4.5vw, 4rem);
+        line-height: 1.15;
         font-weight: 700;
         margin-bottom: 20px;
         max-width: 800px;
     }
-    .hero h1 span {
-        color: var(--color-accent);
-    }
+    .hero h1 span { color: var(--color-accent); }
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: #d0d6e0;
         max-width: 600px;
         margin-bottom: 40px;
         font-weight: 300;
     }
-    .btn-group {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-    .btn-primary, .btn-secondary {
-        padding: 15px 35px;
+    .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
+    .btn {
+        padding: 12px 25px;
         border-radius: 8px;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-weight: 500;
         text-decoration: none;
         transition: var(--transition);
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-    }
-    .btn-primary {
-        background: var(--color-accent);
+        gap: 8px;
         color: var(--color-white);
-        box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
     }
-    .btn-primary:hover {
-        background: var(--color-accent-hover);
-        transform: translateY(-3px);
-        box-shadow: 0 15px 25px rgba(0, 102, 255, 0.4);
-    }
-    .btn-secondary {
-        background: transparent;
-        color: var(--color-white);
-        border: 1px solid rgba(255,255,255,0.3);
-    }
-    .btn-secondary:hover {
-        background: rgba(255,255,255,0.1);
-        border-color: var(--color-white);
-    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    .btn-phone { background: var(--color-accent); }
+    .btn-line { background: var(--color-line); }
+    .btn-msg { background: var(--color-msg); }
 
     /* --- Stats Section --- */
     .stats {
@@ -165,52 +158,27 @@
         gap: 5%;
         padding: 40px 5%;
         background: var(--color-white);
-        box-shadow: 0 -10px 40px rgba(0,0,0,0.02);
+        box-shadow: 0 -10px 40px rgba(0,0,0,0.05);
         position: relative;
         z-index: 10;
-        margin-top: -50px;
+        margin-top: -60px;
         border-radius: 20px 20px 0 0;
         flex-wrap: wrap;
     }
-    .stat-item {
-        text-align: center;
-        padding: 20px;
-    }
-    .stat-num {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--color-primary);
-    }
-    .stat-label {
-        color: var(--color-text-light);
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+    .stat-item { text-align: center; padding: 15px; }
+    .stat-num { font-size: 2.5rem; font-weight: 700; color: var(--color-primary); line-height: 1; }
+    .stat-label { color: var(--color-text-light); font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; }
 
     /* --- Services Section --- */
-    .section {
-        padding: 100px 5%;
-    }
-    .section-header {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-    .section-title {
-        font-size: 2.5rem;
-        color: var(--color-primary);
-        margin-bottom: 15px;
-    }
-    .section-subtitle {
-        color: var(--color-text-light);
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto;
-    }
+    .section { padding: 90px 5%; }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-title { font-size: 2.2rem; color: var(--color-primary); margin-bottom: 10px; font-weight: 700; }
+    .section-subtitle { color: var(--color-text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
+        max-width: 1200px; margin: 0 auto;
     }
     .service-card {
         background: var(--color-white);
@@ -219,8 +187,6 @@
         box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         transition: var(--transition);
         border: 1px solid rgba(0,0,0,0.02);
-        position: relative;
-        overflow: hidden;
     }
     .service-card:hover {
         transform: translateY(-10px);
@@ -228,197 +194,117 @@
         border-color: rgba(0,102,255,0.1);
     }
     .service-icon {
-        width: 60px;
-        height: 60px;
+        width: 55px; height: 55px;
         background: rgba(0, 102, 255, 0.1);
         color: var(--color-accent);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 25px;
+        border-radius: 14px;
+        display: flex; align-items: center; justify-content: center;
+        margin-bottom: 20px;
     }
-    .service-card h3 {
-        font-size: 1.4rem;
-        color: var(--color-primary);
-        margin-bottom: 15px;
-    }
-    .service-card p {
-        color: var(--color-text-light);
-    }
-    .service-link {
-        display: inline-block;
-        margin-top: 20px;
-        color: var(--color-accent);
-        text-decoration: none;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-    .service-link:hover {
-        gap: 10px;
-    }
+    .service-card h3 { font-size: 1.3rem; color: var(--color-primary); margin-bottom: 12px; }
+    .service-card p { color: var(--color-text-light); font-size: 0.95rem; }
 
     /* --- Projects Section --- */
-    .projects-section {
-        background: var(--color-primary);
-        color: var(--color-white);
-    }
-    .projects-section .section-title {
-        color: var(--color-white);
-    }
-    .projects-section .section-subtitle {
-        color: #a0aec0;
-    }
+    .projects-section { background: var(--color-primary); color: var(--color-white); }
+    .projects-section .section-title { color: var(--color-white); }
+    .projects-section .section-subtitle { color: #a0aec0; }
     .project-card {
         border-radius: var(--radius);
         overflow: hidden;
         position: relative;
         aspect-ratio: 4/3;
         background: #1a365d;
-        cursor: pointer;
     }
     .project-img {
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, #1a365d, #2b6cb0);
+        width: 100%; height: 100%;
         transition: var(--transition);
     }
-    /* Placeholder for images using CSS gradients */
     .p-1 { background: linear-gradient(120deg, #2b6cb0, #2c5282); }
     .p-2 { background: linear-gradient(120deg, #4a5568, #2d3748); }
     .p-3 { background: linear-gradient(120deg, #0066ff, #0a2540); }
     
     .project-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        position: absolute; bottom: 0; left: 0; width: 100%;
         padding: 30px 20px;
         background: linear-gradient(to top, rgba(10,37,64,0.95), transparent);
         transform: translateY(20px);
         opacity: 0.9;
         transition: var(--transition);
     }
-    .project-card:hover .project-img {
-        transform: scale(1.05);
-    }
-    .project-card:hover .project-overlay {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    .project-overlay h4 {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-    }
-    .project-overlay span {
-        color: var(--color-accent);
-        font-size: 0.9rem;
-        font-weight: 500;
-    }
+    .project-card:hover .project-img { transform: scale(1.05); }
+    .project-card:hover .project-overlay { transform: translateY(0); opacity: 1; }
+    .project-overlay h4 { font-size: 1.1rem; margin-bottom: 5px; color: #fff;}
+    .project-overlay span { color: var(--color-accent); font-size: 0.85rem; font-weight: 500; }
 
-    /* --- CTA Section --- */
-    .cta-section {
-        background: var(--color-accent);
-        color: var(--color-white);
-        text-align: center;
-        padding: 80px 5%;
-    }
-    .cta-section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-    .cta-section .btn-secondary {
-        background: var(--color-white);
-        color: var(--color-accent);
-        border: none;
-        margin-top: 20px;
-    }
-    .cta-section .btn-secondary:hover {
-        background: var(--color-bg);
-        transform: translateY(-3px);
-    }
-
-    /* --- Footer --- */
+    /* --- Footer / Contact --- */
     footer {
         background: #051626;
         color: #a0aec0;
-        padding: 50px 5% 20px;
+        padding: 60px 5% 30px;
     }
     .footer-grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 50px;
-        margin-bottom: 40px;
+        display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 50px;
+        max-width: 1200px; margin: 0 auto 40px;
     }
     .footer-logo {
-        font-size: 1.5rem;
-        color: var(--color-white);
-        font-weight: 700;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        font-size: 1.5rem; color: var(--color-white); font-weight: 700;
+        margin-bottom: 15px; display: flex; align-items: center; gap: 10px;
     }
-    footer h4 {
-        color: var(--color-white);
-        margin-bottom: 20px;
-        font-size: 1.1rem;
-    }
-    footer ul {
-        list-style: none;
-    }
-    footer ul li {
-        margin-bottom: 10px;
-    }
-    footer ul a {
-        color: #a0aec0;
-        text-decoration: none;
-        transition: var(--transition);
-    }
-    footer ul a:hover {
-        color: var(--color-accent);
-    }
+    footer h4 { color: var(--color-white); margin-bottom: 20px; font-size: 1.1rem; }
+    .contact-list { list-style: none; }
+    .contact-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px;}
+    .contact-list a { color: #a0aec0; text-decoration: none; transition: var(--transition); }
+    .contact-list a:hover { color: var(--color-white); }
+    
     .copyright {
         border-top: 1px solid rgba(255,255,255,0.1);
-        padding-top: 20px;
-        text-align: center;
-        font-size: 0.9rem;
+        padding-top: 20px; text-align: center; font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
         .hero h1 { font-size: 2rem; }
-        .nav-links { display: none; } /* Simplified for demo */
-        .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+        .nav-links { display: none; } 
+        .footer-grid { grid-template-columns: 1fr; gap: 40px; }
         .stats { flex-direction: column; gap: 20px; border-radius: 0; margin-top: 0; box-shadow: none; border-bottom: 1px solid #eee; }
+        .btn-group { flex-direction: column; width: 100%; }
+        .btn { justify-content: center; }
     }
 </style>
 
 <!-- Navbar -->
 <nav id="navbar">
     <div class="logo">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v16M8 4v16M2 8h20M2 16h20"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v16M8 4v16M2 8h20M2 16h20"/></svg>
         PPM Special
     </div>
-    <ul class="nav-links">
-        <li><a href="#services">บริการของเรา</a></li>
-        <li><a href="#projects">ผลงาน</a></li>
-        <li><a href="#contact" class="nav-btn">ติดต่อเรา</a></li>
-    </ul>
+    <div class="nav-right">
+        <ul class="nav-links">
+            <li><a href="#services" data-i18n="nav_services">บริการของเรา</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">ผลงาน</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">ติดต่อเรา</a></li>
+        </ul>
+        <!-- Language Toggle -->
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('th')">TH</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+    </div>
 </nav>
 
 <!-- Hero -->
 <div class="hero">
-    <div class="hero-badge">ผู้นำด้านวิศวกรรมระบบท่อ</div>
-    <h1>ยกระดับมาตรฐานอุตสาหกรรมด้วย <span>ระบบท่อคุณภาพสูง</span></h1>
-    <p>บริษัท พีพีเอ็ม สเปเชียล จำกัด ให้บริการรับเหมาติดตั้งระบบ Piping ครบวงจร โดยทีมวิศวกรและช่างเชื่อมมาตรฐานสากล</p>
+    <div class="hero-badge" data-i18n="hero_badge">ผู้นำด้านวิศวกรรมระบบท่อ</div>
+    <h1 data-i18n="hero_title">หจก. พีพีเอ็ม สเปเชียล <br><span>(PPM Special)</span></h1>
+    <p data-i18n="hero_desc">รับเหมาติดตั้งระบบ Piping อุตสาหกรรมครบวงจร งานเชื่อมมาตรฐานสากล ปลอดภัย ส่งมอบงานตรงเวลา</p>
     <div class="btn-group">
-        <a href="#contact" class="btn-primary">
-            ปรึกษาโครงการฟรี
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <a href="tel:0824281677" class="btn btn-phone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            082-428-1677
         </a>
-        <a href="#projects" class="btn-secondary">ดูผลงานของเรา</a>
+        <a href="https://line.me/ti/p/463flsij" target="_blank" class="btn btn-line">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.3c0-4.3-4.3-8.3-10.6-8.3C7 2 2 6.1 2 10.3c0 3.8 3.5 7.2 8.3 8.1l.6.1c.3 0 .7.3.6.7l-.2 1.3c-.1.3-.1.4.3.2 1.2-.7 4.1-2.4 5.9-4.2C21.7 14.5 24 12.6 24 10.3zM8.3 12.6c0 .3-.2.5-.5.5H6.2c-.3 0-.5-.2-.5-.5V8.5c0-.3.2-.5.5-.5s.5.2.5.5v3.1h1.1c.3 0 .5.2.5.5zm3.7 0c0 .3-.2.5-.5.5h-2.1c-.3 0-.5-.2-.5-.5V8.5c0-.3.2-.5.5-.5h2.1c.3 0 .5.2.5.5s-.2.5-.5.5h-1.6v.7h1.6c.3 0 .5.2.5.5s-.2.5-.5.5h-1.6v.8h1.6c.3 0 .5.2.5.5zm3.6-2.5l-1.5 2.4c-.1.1-.3.1-.5 0l-1.5-2.4v2.4c0 .3-.2.5-.5.5s-.5-.2-.5-.5V8.5c0-.1 0-.3.2-.4.1-.1.3-.1.5 0l1.5 2.4V8.5c0-.3.2-.5.5-.5s.5.2.5.5v4.1zm4.7.5H18c-.3 0-.5-.2-.5-.5V8.5c0-.3.2-.5.5-.5h2.3c.3 0 .5.2.5.5s-.2.5-.5.5H19v.7h1.3c.3 0 .5.2.5.5s-.2.5-.5.5H19v.8h1.3c.3 0 .5.2.5.5s-.2.5-.5.5z"/></svg>
+            LINE ID: 463flsij
+        </a>
     </div>
 </div>
 
@@ -426,48 +312,39 @@
 <div class="stats" id="resize-container">
     <div class="stat-item">
         <div class="stat-num">10+</div>
-        <div class="stat-label">ปีแห่งประสบการณ์</div>
+        <div class="stat-label" data-i18n="stat_1">ปีแห่งประสบการณ์</div>
     </div>
     <div class="stat-item">
         <div class="stat-num">500+</div>
-        <div class="stat-label">โครงการที่สำเร็จ</div>
+        <div class="stat-label" data-i18n="stat_2">โครงการที่สำเร็จ</div>
     </div>
     <div class="stat-item">
         <div class="stat-num">100%</div>
-        <div class="stat-label">ส่งงานตรงเวลา</div>
+        <div class="stat-label" data-i18n="stat_3">ส่งงานตรงเวลา</div>
     </div>
 </div>
 
 <!-- Services -->
 <div class="section" id="services">
     <div class="section-header">
-        <h2 class="section-title">บริการหลักของเรา</h2>
-        <p class="section-subtitle">เราเชี่ยวชาญการเดินท่อทุกประเภทในโรงงานอุตสาหกรรม ด้วยวัสดุเกรดพรีเมียมและความปลอดภัยสูงสุด</p>
+        <h2 class="section-title" data-i18n="srv_title">บริการหลักของเรา</h2>
+        <p class="section-subtitle" data-i18n="srv_subtitle">เราเชี่ยวชาญการเดินท่อทุกประเภทในโรงงานอุตสาหกรรม ด้วยวัสดุเกรดพรีเมียมและความปลอดภัยสูงสุด</p>
     </div>
     <div class="grid">
         <div class="service-card">
-            <div class="service-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l3-9 5 18 3-9h5"/></svg>
-            </div>
-            <h3>Process Piping</h3>
-            <p>ออกแบบและติดตั้งระบบท่อสำหรับกระบวนการผลิต รองรับสารเคมี ความดัน และอุณหภูมิสูงตามมาตรฐาน ASME</p>
-            <a href="#" class="service-link">ดูรายละเอียด <span>&rarr;</span></a>
+            <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l3-9 5 18 3-9h5"/></svg></div>
+            <h3 data-i18n="srv_1_h">Process Piping</h3>
+            <p data-i18n="srv_1_p">ออกแบบและติดตั้งระบบท่อสำหรับกระบวนการผลิต รองรับสารเคมี ความดัน และอุณหภูมิสูงตามมาตรฐาน ASME</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h3>Chilled Water & Steam</h3>
-            <p>ระบบท่อน้ำหล่อเย็นและท่อไอน้ำ หุ้มฉนวนกันความร้อนอย่างดี ป้องกันการรั่วซึม ประหยัดพลังงานในระยะยาว</p>
-            <a href="#" class="service-link">ดูรายละเอียด <span>&rarr;</span></a>
+            <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 data-i18n="srv_2_h">Chilled Water & Steam</h3>
+            <p data-i18n="srv_2_p">ระบบท่อน้ำหล่อเย็นและท่อไอน้ำ หุ้มฉนวนกันความร้อนอย่างดี ป้องกันการรั่วซึม ประหยัดพลังงานในระยะยาว</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-            </div>
-            <h3>High Pressure Welding</h3>
-            <p>บริการงานเชื่อมท่อสแตนเลส ท่อเหล็ก แรงดันสูงโดยช่างเชื่อมที่ผ่านการทดสอบ (WPS/PQR Certified)</p>
-            <a href="#" class="service-link">ดูรายละเอียด <span>&rarr;</span></a>
+            <div class="service-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+            <h3 data-i18n="srv_3_h">High Pressure Welding</h3>
+            <p data-i18n="srv_3_p">บริการงานเชื่อมท่อสแตนเลส (Food Grade) ท่อเหล็ก แรงดันสูงโดยช่างเชื่อมที่ผ่านการทดสอบ (WPS/PQR)</p>
         </div>
     </div>
 </div>
@@ -475,78 +352,77 @@
 <!-- Projects -->
 <div class="section projects-section" id="projects">
     <div class="section-header">
-        <h2 class="section-title">ผลงานเด่นของเรา</h2>
-        <p class="section-subtitle">ความไว้วางใจจากโรงงานชั้นนำระดับประเทศ</p>
+        <h2 class="section-title" data-i18n="prj_title">ผลงานเด่นของเรา</h2>
+        <p class="section-subtitle" data-i18n="prj_subtitle">ความไว้วางใจจากโรงงานชั้นนำระดับประเทศ</p>
     </div>
     <div class="grid">
         <div class="project-card">
             <div class="project-img p-1"></div>
             <div class="project-overlay">
-                <span>อุตสาหกรรมอาหาร</span>
-                <h4>ระบบท่อ Stainless Food Grade</h4>
+                <span data-i18n="prj_1_tag">อุตสาหกรรมอาหาร</span>
+                <h4 data-i18n="prj_1_h">ระบบท่อ Stainless Food Grade</h4>
             </div>
         </div>
         <div class="project-card">
             <div class="project-img p-2"></div>
             <div class="project-overlay">
-                <span>นิคมอุตสาหกรรมระยอง</span>
-                <h4>ติดตั้งท่อ Chilled Water 500 เมตร</h4>
+                <span data-i18n="prj_2_tag">นิคมอุตสาหกรรม</span>
+                <h4 data-i18n="prj_2_h">ติดตั้งท่อ Chilled Water ขนาดใหญ่</h4>
             </div>
         </div>
         <div class="project-card">
             <div class="project-img p-3"></div>
             <div class="project-overlay">
-                <span>โรงไฟฟ้าย่อย</span>
-                <h4>งานเชื่อมท่อ High Pressure Steam</h4>
+                <span data-i18n="prj_3_tag">โรงไฟฟ้าย่อย</span>
+                <h4 data-i18n="prj_3_h">งานเชื่อมท่อ High Pressure Steam</h4>
             </div>
         </div>
     </div>
 </div>
 
-<!-- CTA -->
-<div class="cta-section" id="contact">
-    <h2>พร้อมเริ่มต้นโครงการของคุณหรือยัง?</h2>
-    <p>ให้วิศวกรของเราช่วยประเมินราคาและวางแผนการดำเนินงานเบื้องต้นให้คุณฟรี ไม่มีค่าใช้จ่าย</p>
-    <a href="mailto:contact@ppmspecial.com" class="btn-primary btn-secondary">
-        ติดต่อนัดหมายประเมินหน้างาน
-    </a>
-</div>
-
-<!-- Footer -->
-<footer>
+<!-- Footer / Contact -->
+<footer id="contact">
     <div class="footer-grid">
         <div>
             <div class="footer-logo">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v16M8 4v16M2 8h20M2 16h20"/></svg>
                 PPM Special
             </div>
-            <p>ผู้เชี่ยวชาญด้านระบบท่ออุตสาหกรรม<br>คุณภาพ ปลอดภัย ส่งมอบตรงเวลา</p>
+            <p data-i18n="footer_desc">ผู้เชี่ยวชาญด้านระบบท่ออุตสาหกรรม<br>คุณภาพ ปลอดภัย ส่งมอบตรงเวลา</p>
         </div>
         <div>
-            <h4>บริการ</h4>
-            <ul>
-                <li><a href="#">Process Piping</a></li>
-                <li><a href="#">Chilled Water System</a></li>
-                <li><a href="#">Steam System</a></li>
-                <li><a href="#">Structural Steel</a></li>
+            <h4 data-i18n="footer_srv">บริการ</h4>
+            <ul style="list-style:none; padding:0;">
+                <li style="margin-bottom:10px; color:#a0aec0;">Process Piping</li>
+                <li style="margin-bottom:10px; color:#a0aec0;">Chilled Water System</li>
+                <li style="margin-bottom:10px; color:#a0aec0;">Steam System</li>
             </ul>
         </div>
         <div>
-            <h4>ติดต่อ</h4>
-            <ul>
-                <li>โทร: 08X-XXX-XXXX</li>
-                <li>อีเมล: info@ppmspecial.com</li>
-                <li>วันทำงาน: จันทร์ - เสาร์ (8:00 - 17:00)</li>
+            <h4 data-i18n="footer_contact">ติดต่อเรา</h4>
+            <ul class="contact-list">
+                <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <a href="tel:0824281677">082-428-1677</a>
+                </li>
+                <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.3c0-4.3-4.3-8.3-10.6-8.3C7 2 2 6.1 2 10.3c0 3.8 3.5 7.2 8.3 8.1l.6.1c.3 0 .7.3.6.7l-.2 1.3c-.1.3-.1.4.3.2 1.2-.7 4.1-2.4 5.9-4.2C21.7 14.5 24 12.6 24 10.3z"/></svg>
+                    <a href="https://line.me/ti/p/463flsij" target="_blank">LINE: 463flsij</a>
+                </li>
+                <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.915 1.488 5.485 3.793 7.159V22l3.461-1.91c1.233.344 2.544.529 3.911.529 5.523 0 10-4.145 10-9.258C23.165 6.145 18.688 2 13.165 2h-1.165z"/></svg>
+                    <a href="https://m.me/PPMspecial" target="_blank">Messenger: PPMspecial</a>
+                </li>
             </ul>
         </div>
     </div>
     <div class="copyright">
-        &copy; 2026 PPM Special Co., Ltd. All rights reserved.
+        &copy; 2026 PPM Special Ltd., Part. All rights reserved.
     </div>
 </footer>
 
 <script>
-    // Navbar Scroll Effect
+    // --- Navbar Scroll Effect ---
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -556,6 +432,85 @@
         }
     });
 
+    // --- Translation Dictionary ---
+    const translations = {
+        th: {
+            nav_services: "บริการของเรา",
+            nav_projects: "ผลงาน",
+            nav_contact: "ติดต่อเรา",
+            hero_badge: "ผู้นำด้านวิศวกรรมระบบท่อ",
+            hero_title: "หจก. พีพีเอ็ม สเปเชียล <br><span>(PPM Special)</span>",
+            hero_desc: "รับเหมาติดตั้งระบบ Piping อุตสาหกรรมครบวงจร งานเชื่อมมาตรฐานสากล ปลอดภัย ส่งมอบงานตรงเวลา",
+            stat_1: "ปีแห่งประสบการณ์",
+            stat_2: "โครงการที่สำเร็จ",
+            stat_3: "ส่งงานตรงเวลา",
+            srv_title: "บริการหลักของเรา",
+            srv_subtitle: "เราเชี่ยวชาญการเดินท่อทุกประเภทในโรงงานอุตสาหกรรม ด้วยวัสดุเกรดพรีเมียมและความปลอดภัยสูงสุด",
+            srv_1_h: "Process Piping",
+            srv_1_p: "ออกแบบและติดตั้งระบบท่อสำหรับกระบวนการผลิต รองรับสารเคมี ความดัน และอุณหภูมิสูงตามมาตรฐาน ASME",
+            srv_2_h: "Chilled Water & Steam",
+            srv_2_p: "ระบบท่อน้ำหล่อเย็นและท่อไอน้ำ หุ้มฉนวนกันความร้อนอย่างดี ป้องกันการรั่วซึม ประหยัดพลังงานในระยะยาว",
+            srv_3_h: "High Pressure Welding",
+            srv_3_p: "บริการงานเชื่อมท่อสแตนเลส (Food Grade) ท่อเหล็ก แรงดันสูงโดยช่างเชื่อมที่ผ่านการทดสอบ (WPS/PQR)",
+            prj_title: "ผลงานเด่นของเรา",
+            prj_subtitle: "ความไว้วางใจจากโรงงานชั้นนำระดับประเทศ",
+            prj_1_tag: "อุตสาหกรรมอาหาร",
+            prj_1_h: "ระบบท่อ Stainless Food Grade",
+            prj_2_tag: "นิคมอุตสาหกรรม",
+            prj_2_h: "ติดตั้งท่อ Chilled Water ขนาดใหญ่",
+            prj_3_tag: "โรงไฟฟ้าย่อย",
+            prj_3_h: "งานเชื่อมท่อ High Pressure Steam",
+            footer_desc: "ผู้เชี่ยวชาญด้านระบบท่ออุตสาหกรรม<br>คุณภาพ ปลอดภัย ส่งมอบตรงเวลา",
+            footer_srv: "บริการ",
+            footer_contact: "ติดต่อเรา"
+        },
+        en: {
+            nav_services: "Services",
+            nav_projects: "Projects",
+            nav_contact: "Contact",
+            hero_badge: "Industrial Piping Leaders",
+            hero_title: "PPM Special Ltd., Part. <br><span>(PPM Special)</span>",
+            hero_desc: "Comprehensive industrial piping installation. International welding standards, safe, and delivered on time.",
+            stat_1: "Years Experience",
+            stat_2: "Projects Completed",
+            stat_3: "On-Time Delivery",
+            srv_title: "Our Core Services",
+            srv_subtitle: "We specialize in all types of industrial piping using premium materials and ensuring maximum safety.",
+            srv_1_h: "Process Piping",
+            srv_1_p: "Design and installation of process piping systems handling chemicals, high pressure, and high temperatures to ASME standards.",
+            srv_2_h: "Chilled Water & Steam",
+            srv_2_p: "Chilled water and steam piping systems with high-quality thermal insulation to prevent leaks and save energy.",
+            srv_3_h: "High Pressure Welding",
+            srv_3_p: "Stainless steel (Food Grade) and carbon steel high-pressure welding by certified welders (WPS/PQR).",
+            prj_title: "Featured Projects",
+            prj_subtitle: "Trusted by leading factories nationwide",
+            prj_1_tag: "Food Industry",
+            prj_1_h: "Stainless Food Grade Piping",
+            prj_2_tag: "Industrial Estate",
+            prj_2_h: "Large Scale Chilled Water Piping",
+            prj_3_tag: "Power Plant",
+            prj_3_h: "High Pressure Steam Welding",
+            footer_desc: "Industrial Piping Experts<br>Quality, Safety, On-time Delivery",
+            footer_srv: "Services",
+            footer_contact: "Contact Us"
+        }
+    };
+
+    // --- Language Switching Logic ---
+    function setLanguage(lang) {
+        // Update Active Button Style
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // Update Text Content
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+    }
+
     // Required Debounced Resize Handler
     let resizeTimer;
     const container = document.getElementById('resize-container');
@@ -563,7 +518,6 @@
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             // Re-calc specific layouts if necessary, handled mostly by CSS grid/flex
-            console.log('Window resized, layout updated.');
         }, 150);
     });
 </script>
