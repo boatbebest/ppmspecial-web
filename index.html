@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ส่วนสำคัญสำหรับ Google (SEO) -->
+    <!-- SEO -->
     <title>หจก. พีพีเอ็ม สเปเชียล (PPM Special) | ผู้เชี่ยวชาญระบบท่อส่งก๊าซธรรมชาติ</title>
-    <meta name="description" content="PPM Special (พีพีเอ็ม สเปเชียล) รับเหมาติดตั้งระบบท่อส่งก๊าซธรรมชาติ งานเชื่อมมาตรฐานสากล (WPS/PQR) และงานวิศวกรรมโครงสร้างเหล็กครบวงจร ประสบการณ์กว่า 15 ปี">
-    <meta name="keywords" content="PPM Special, พีพีเอ็ม สเปเชียล, ระบบท่อส่งก๊าซ, งานเชื่อมท่ออุตสาหกรรม, ติดตั้งท่อก๊าซ, Piping Installation Thailand">
+    <meta name="description" content="PPM Special (พีพีเอ็ม สเปเชียล) รับเหมาติดตั้งระบบท่อส่งก๊าซธรรมชาติ งานเชื่อมมาตรฐานสากล (WPS/PQR) ประสบการณ์กว่า 15 ปี">
+    <meta name="keywords" content="PPM Special, พีพีเอ็ม สเปเชียล, ระบบท่อส่งก๊าซ, งานเชื่อมท่ออุตสาหกรรม, Piping Installation">
     <meta name="author" content="PPM Special">
 
     <style>
@@ -16,7 +16,6 @@
         :root {
             --color-primary: #0a2540;
             --color-accent: #0066ff;
-            --color-accent-hover: #0052cc;
             --color-bg: #f8f9fa;
             --color-text: #333333;
             --color-text-light: #666666;
@@ -53,55 +52,31 @@
             padding: 0.8rem 5%;
         }
 
-        .logo {
-            font-size: 1rem; font-weight: 700; color: var(--color-white);
-            display: flex; align-items: center; gap: 10px;
-        }
-
+        .logo { font-size: 1rem; font-weight: 700; color: var(--color-white); display: flex; align-items: center; gap: 10px; }
         nav.scrolled .logo, nav.scrolled .nav-links a { color: var(--color-primary) !important; }
 
         .nav-right { display: flex; align-items: center; gap: 30px; }
         .nav-links { display: flex; gap: 20px; list-style: none; }
-        .nav-links a {
-            color: var(--color-white); text-decoration: none;
-            font-weight: 500; font-size: 0.95rem; transition: var(--transition);
-        }
+        .nav-links a { color: var(--color-white); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
         .nav-links a:hover { color: var(--color-accent) !important; }
 
-        .lang-switch {
-            display: flex; background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; overflow: hidden;
-        }
-
+        .lang-switch { display: flex; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; overflow: hidden; }
         nav.scrolled .lang-switch { background: #eee; border-color: #ddd; }
-
-        .lang-btn {
-            padding: 6px 12px; border: none; background: transparent;
-            font-weight: 600; font-size: 0.8rem; cursor: pointer; color: var(--color-white);
-        }
-
+        .lang-btn { padding: 6px 12px; border: none; background: transparent; font-weight: 600; font-size: 0.8rem; cursor: pointer; color: var(--color-white); }
         nav.scrolled .lang-btn { color: var(--color-text-light); }
         .lang-btn.active { background: var(--color-accent); color: var(--color-white) !important; }
 
         /* --- Hero Section --- */
         .hero {
             height: 85vh; min-height: 600px;
-            background: linear-gradient(135deg, rgba(10,37,64,0.85) 0%, rgba(10,37,64,0.7) 100%),
-                        url('images/BG.png');
+            background: linear-gradient(135deg, rgba(10,37,64,0.85) 0%, rgba(10,37,64,0.7) 100%), url('images/BG.png');
             background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center;
-            padding: 0 10%; color: var(--color-white);
+            display: flex; flex-direction: column; justify-content: center; padding: 0 10%; color: var(--color-white);
         }
-
         .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
         .hero h1 span { color: var(--color-accent); }
-
         .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
-        .btn {
-            padding: 12px 25px; border-radius: 8px; font-weight: 500;
-            text-decoration: none; transition: var(--transition);
-            display: inline-flex; align-items: center; gap: 8px; color: var(--color-white);
-        }
+        .btn { padding: 12px 25px; border-radius: 8px; font-weight: 500; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; color: var(--color-white); }
         .btn-phone { background: var(--color-accent); }
         .btn-line { background: var(--color-line); }
 
@@ -109,161 +84,59 @@
         .section { padding: 80px 10%; }
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { font-size: 2.2rem; color: var(--color-primary); margin-bottom: 15px; }
-        .section-title p { color: var(--color-text-light); font-size: 1.1rem; }
-
         .about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .experience-badge { background: var(--color-accent); color: white; display: inline-block; padding: 8px 16px; border-radius: 6px; font-weight: 600; margin-bottom: 15px; }
-
         .scope-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
         .scope-item { background: #fff; padding: 25px; border-radius: 8px; border-left: 4px solid var(--color-accent); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
 
-        .clients-section { background: #fff; text-align: center; padding: 60px 5%; border-top: 1px solid #eee; }
-        .client-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center; margin-top: 40px; opacity: 0.6; }
-        .client-name { font-weight: 700; color: #444; font-size: 1.1rem; }
+        /* --- Client Logos --- */
+        .clients-section { background: #fff; text-align: center; padding: 80px 5%; border-top: 1px solid #eee; }
+        .client-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; align-items: center; margin-top: 40px; }
+        .client-logo { height: 60px; width: auto; filter: grayscale(100%); opacity: 0.6; transition: var(--transition); }
+        .client-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
 
-        /* --- Project Reference Grid --- */
-        .projects-section { background: var(--color-primary); color: white; }
+        /* --- Project Grid --- */
+        .projects-section { background: #0a192f; color: white; }
         .projects-section .section-title h2 { color: white; }
-        
-        .project-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-            gap: 25px; 
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; }
+        .project-card { background: #1a365d; border-radius: var(--radius); overflow: hidden; position: relative; aspect-ratio: 4/3; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); cursor: pointer; }
+        .project-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.6); }
+        .project-card .bg-img { width: 100%; height: 100%; background-size: cover; background-position: center; transition: transform 0.6s ease; }
+        .project-card:hover .bg-img { transform: scale(1.1); }
 
-        .project-card { 
-            background: #1a365d;
-            border-radius: var(--radius); 
-            overflow: hidden; 
-            position: relative; 
-            aspect-ratio: 4/3; 
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .project-card .bg-img {
-            width: 100%; height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .bg-img {
-            transform: scale(1.1);
-        }
-
+        /* Scrim for readability */
         .project-overlay { 
-            position: absolute; bottom: 0; left: 0; width: 100%; padding: 25px 20px; 
-            background: linear-gradient(transparent, rgba(0,0,0,0.95)); 
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 60%;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 30px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+            transition: 0.3s;
         }
-
-        .project-overlay .date { 
-            font-size: 0.8rem; color: var(--color-accent); font-weight: 600; text-transform: uppercase; margin-bottom: 5px; display: block;
-        }
-
-        .project-overlay h4 { font-size: 0.95rem; line-height: 1.4; color: #fff; }
+        .project-overlay .date { font-size: 0.85rem; color: #4db3ff; font-weight: 700; margin-bottom: 6px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); }
+        .project-overlay h4 { font-size: 1rem; line-height: 1.4; color: #ffffff; font-weight: 500; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
 
         /* --- Lightbox Modal --- */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            user-select: none;
-        }
-
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 80vh;
-            border-radius: 4px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            object-fit: contain;
-            animation: zoom 0.3s ease-out;
-        }
-
-        @keyframes zoom {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        .lb-close {
-            position: absolute;
-            top: 20px; right: 30px;
-            color: #fff; font-size: 40px; font-weight: bold;
-            cursor: pointer; z-index: 2001;
-        }
-
-        .lb-prev, .lb-next {
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
-            color: white;
-            font-weight: bold;
-            font-size: 24px;
-            transition: 0.3s;
-            border-radius: 0 3px 3px 0;
-            cursor: pointer;
-            background-color: rgba(255,255,255,0.1);
-            text-decoration: none;
-        }
-
-        .lb-next { right: 20px; border-radius: 3px 0 0 3px; }
-        .lb-prev { left: 20px; }
-        .lb-prev:hover, .lb-next:hover { background-color: var(--color-accent); }
-
-        .lb-caption {
-            position: absolute;
-            bottom: 40px;
-            color: #ccc;
-            text-align: center;
-            width: 100%;
-            padding: 0 20px;
-            font-size: 1rem;
-        }
-
-        .lb-counter {
-            position: absolute;
-            top: 20px; left: 30px;
-            color: #fff;
-            font-size: 0.9rem;
-            background: rgba(0,0,0,0.5);
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
+        .lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); justify-content: center; align-items: center; padding: 20px; }
+        .lightbox-content { max-width: 90%; max-height: 80vh; object-fit: contain; animation: zoom 0.3s ease-out; }
+        @keyframes zoom { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .lb-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; }
+        .lb-prev, .lb-next { position: absolute; top: 50%; padding: 16px; color: white; font-weight: bold; font-size: 24px; background-color: rgba(255,255,255,0.1); cursor: pointer; }
+        .lb-next { right: 20px; } .lb-prev { left: 20px; }
+        .lb-caption { position: absolute; bottom: 40px; color: #fff; text-align: center; width: 100%; font-size: 1.1rem; }
+        .lb-counter { position: absolute; top: 20px; left: 30px; color: #fff; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 20px; }
 
         /* --- Footer --- */
         footer { background: #051626; color: #a0aec0; padding: 60px 10% 30px; border-top: 2px solid var(--color-accent); }
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 40px; }
-        
         .footer-list { list-style: none; padding: 0; }
         .footer-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 12px; }
         .footer-list a { color: #a0aec0; text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
         .footer-list a:hover { color: var(--color-white); }
-        
-        .footer-icon { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
-        .icon-line { color: var(--color-line); }
-        .icon-messenger { color: var(--color-messenger); }
-        .icon-facebook { color: var(--color-facebook); }
+        .footer-icon { width: 20px; height: 20px; fill: currentColor; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .about-container, .footer-grid { grid-template-columns: 1fr; }
-            .lb-prev, .lb-next { padding: 10px; font-size: 18px; }
         }
     </style>
 </head>
@@ -298,8 +171,8 @@
         <div class="about-text">
             <div class="experience-badge" data-i18n="about_exp">ตั้งแต่ปี 2552</div>
             <h2 data-i18n="about_title">ประวัติและความเป็นมา</h2>
-            <p data-i18n="about_p1">ห้างหุ้นส่วนจำกัด พีพีเอ็ม สเปเชียล ก่อตั้งขึ้นในปี พ.ศ. 2552 โดยมุ่งเน้นงานระบบท่อส่งก๊าซธรรมชาติเป็นหลัก</p>
-            <p data-i18n="about_p2">เราได้รับความไว้วางใจจากบริษัทชั้นนำ อาทิ ปตท. (PTT), TRC และ Italian-Thai ในการดูแลโครงการวิศวกรรมสำคัญระดับประเทศ</p>
+            <p data-i18n="about_p1">ห้างหุ้นส่วนจำกัด พีพีเอ็ม สเปเชียล ก่อตั้งขึ้นในปี พ.ศ. 2552 มุ่งเน้นงานระบบท่อส่งก๊าซธรรมชาติเป็นหลัก</p>
+            <p data-i18n="about_p2">เราได้รับความไว้วางใจจากบริษัทชั้นนำ อาทิ ปตท. (PTT), TRC และ Italian-Thai ในการดูแลโครงการสำคัญระดับประเทศ</p>
         </div>
         <div class="about-stats">
             <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
@@ -313,81 +186,82 @@
     </div>
 </section>
 
-<section class="section" id="services" style="background: #f0f4f8;">
-    <div class="section-title">
-        <h2 data-i18n="scope_title">ขอบเขตงานบริการของเรา</h2>
-        <p data-i18n="scope_subtitle">ครอบคลุมงาน Piping, Mechanical และงานวิศวกรรมโครงสร้างทุกรูปแบบ</p>
-    </div>
-    <div class="scope-grid">
-        <div class="scope-item"><h4>Piping & Equipment Mechanical Work</h4></div>
-        <div class="scope-item"><h4>Piping Pre-Fabrication & Installation</h4></div>
-        <div class="scope-item"><h4>Flushing, Testing & Pre-commissioning</h4></div>
-        <div class="scope-item"><h4>Pipe Support Fabrication & Installation</h4></div>
-        <div class="scope-item"><h4>Structure Pre-Fabrication & Installation</h4></div>
-        <div class="scope-item"><h4>Mechanical Installation</h4></div>
-    </div>
-</section>
-
+<!-- Section: Clients (Logo Edition) -->
 <section class="clients-section">
     <h3 data-i18n="client_title">ความไว้วางใจจากพันธมิตร</h3>
-    <div class="client-logos">
-        <span class="client-name">PTT</span><span class="client-name">TRC</span>
-        <span class="client-name">ITALIAN-THAI</span><span class="client-name">VICCHI</span>
-        <span class="client-name">POLYTECHNOLOGY</span><span class="client-name">KIKUCHI</span>
+    <div class="client-grid">
+        <img src="images/PTT.JPG" alt="PTT" class="client-logo">
+        <img src="images/TRC.JPG" alt="TRC" class="client-logo">
+        <img src="images/ITALIAN-THAI.JPG" alt="Italian-Thai" class="client-logo">
+        <img src="images/VICCHI.JPG" alt="Vicchi" class="client-logo">
+        <img src="images/POLYTECHNOLOGY.JPG" alt="Polytechnology" class="client-logo">
+        <img src="images/VESOLUTION.JPG" alt="VESOLUTION" class="client-logo">
+        <img src="images/KIKUCHI.JPG" alt="Kikuchi" class="client-logo">
     </div>
 </section>
 
-<!-- Section: Reference Projects -->
 <section class="section projects-section" id="projects">
     <div class="section-title">
         <h2 data-i18n="prj_title">โครงการอ้างอิง (Project References)</h2>
         <p style="color: #a0aec0;" data-i18n="prj_instruction">คลิกที่โครงการเพื่อดูรูปภาพเพิ่มเติม</p>
     </div>
     <div class="project-grid">
+        <!-- 1: SN10 -->
         <div class="project-card" onclick="openLightbox('SN10', 4, 'prj_1_h')">
             <div class="bg-img" style="background-image: url('images/SN10-1.JPG');"></div>
-            <div class="project-overlay"><span class="date">2023-2024</span><h4 data-i18n="prj_1_h">การซ่อมแซมท่อก๊าซ SN10</h4></div>
+            <div class="project-overlay"><span class="date">2024-2023</span><h4 data-i18n="prj_1_h">การซ่อมแซมท่อส่งก๊าซ SN10</h4></div>
         </div>
+        <!-- 2: BV10 -->
         <div class="project-card" onclick="openLightbox('BV10', 4, 'prj_2_h')">
             <div class="bg-img" style="background-image: url('images/BV10-1.JPG');"></div>
-            <div class="project-overlay"><span class="date">2023-2024</span><h4 data-i18n="prj_2_h">PTT BV10 Pig Receiving</h4></div>
+            <div class="project-overlay"><span class="date">2024-2023</span><h4 data-i18n="prj_2_h">PTT BV10 Pig Receiving</h4></div>
         </div>
+        <!-- 3: BV20 -->
         <div class="project-card" onclick="openLightbox('BV20', 4, 'prj_3_h')">
             <div class="bg-img" style="background-image: url('images/BV20-1.JPG');"></div>
-            <div class="project-overlay"><span class="date">2021-2022</span><h4 data-i18n="prj_3_h">BV20 Pressure Reduction</h4></div>
+            <div class="project-overlay"><span class="date">2022-2021</span><h4 data-i18n="prj_3_h">BV20 Pressure Reduction Project</h4></div>
         </div>
+        <!-- 4: SAINOI -->
         <div class="project-card" onclick="openLightbox('SAINOI', 4, 'prj_4_h')">
             <div class="bg-img" style="background-image: url('images/SAINOI-1.JPG');"></div>
-            <div class="project-overlay"><span class="date">2021-2022</span><h4 data-i18n="prj_4_h">Bypass line SAI NOI</h4></div>
+            <div class="project-overlay"><span class="date">2022-2021</span><h4 data-i18n="prj_4_h">Bypass line SAI NOI</h4></div>
         </div>
+        <!-- 5: PN -->
         <div class="project-card" onclick="openLightbox('PN', 5, 'prj_5_h')">
             <div class="bg-img" style="background-image: url('images/PN-1.JPG');"></div>
             <div class="project-overlay"><span class="date">2019</span><h4 data-i18n="prj_5_h">PTT NGV พี.เอ็น.ปิโตรเลียม</h4></div>
         </div>
+        <!-- 6: NTN -->
         <div class="project-card" onclick="openLightbox('NTN', 5, 'prj_6_h')">
             <div class="bg-img" style="background-image: url('images/NTN-1.JPG');"></div>
             <div class="project-overlay"><span class="date">2019</span><h4 data-i18n="prj_6_h">ปตท. เอ็นทีเอนเนอจี ก๊าซ</h4></div>
         </div>
+        <!-- 7: BV1 -->
         <div class="project-card" onclick="openLightbox('BV1', 4, 'prj_7_h')">
             <div class="bg-img" style="background-image: url('images/BV1-1.JPG');"></div>
             <div class="project-overlay"><span class="date">2018</span><h4 data-i18n="prj_7_h">PTT BV1 MODIFICATION</h4></div>
         </div>
+        <!-- 8: BV4.19 -->
         <div class="project-card" onclick="openLightbox('BV4.19', 4, 'prj_8_h')">
             <div class="bg-img" style="background-image: url('images/BV4.19-1.JPG');"></div>
             <div class="project-overlay"><span class="date">2018</span><h4 data-i18n="prj_8_h">BV 4.19 PIG Launcher/Receiver</h4></div>
         </div>
+        <!-- 9: OTS2 -->
         <div class="project-card" onclick="openLightbox('OTS2', 4, 'prj_9_h')">
             <div class="bg-img" style="background-image: url('images/OTS2-1.JPG');"></div>
             <div class="project-overlay"><span class="date">2018</span><h4 data-i18n="prj_9_h">ท่อส่งก๊าซสถานี OTS#2</h4></div>
         </div>
+        <!-- 10: NG -->
         <div class="project-card" onclick="openLightbox('NG', 4, 'prj_10_h')">
             <div class="bg-img" style="background-image: url('images/NG-1.JPG');"></div>
             <div class="project-overlay"><span class="date">2018</span><h4 data-i18n="prj_10_h">METERING FOR DAIRY PLUS</h4></div>
         </div>
+        <!-- 11: NGM -->
         <div class="project-card" onclick="openLightbox('NGM', 4, 'prj_11_h')">
             <div class="bg-img" style="background-image: url('images/NGM-1.JPG');"></div>
-            <div class="project-overlay"><span class="date">2017-2018</span><h4 data-i18n="prj_11_h">Metering Station TOP SPP</h4></div>
+            <div class="project-overlay"><span class="date">2018-2017</span><h4 data-i18n="prj_11_h">NG Metering Station TOP SPP</h4></div>
         </div>
+        <!-- 12: PROPANE -->
         <div class="project-card" onclick="openLightbox('PROPANE', 4, 'prj_12_h')">
             <div class="bg-img" style="background-image: url('images/PROPANE-1.JPG');"></div>
             <div class="project-overlay"><span class="date">2017</span><h4 data-i18n="prj_12_h">Propane Metering Station</h4></div>
@@ -423,100 +297,60 @@
         <div>
             <h4 style="color:#fff; margin-bottom: 20px;" data-i18n="footer_contact_title">ติดต่อเรา</h4>
             <ul class="footer-list">
-                <li>
-                    <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <a href="tel:0824281677">082-428-1677</a>
-                </li>
-                <li>
-                    <svg class="footer-icon icon-line" viewBox="0 0 24 24"><path d="M24 10.304c0-4.369-4.305-7.923-9.591-7.923-5.285 0-9.589 3.554-9.589 7.923 0 3.914 3.411 7.185 8.016 7.828.311.066.735.206.842.473.123.307.081.787.039 1.096l-.168.99c-.051.306-.245 1.196 1.053.652 1.298-.544 7.009-4.128 9.553-7.062.593-.728.845-1.428.845-1.977zm-14.734 2.213h-1.129c-.27 0-.489-.22-.489-.489v-3.568c0-.27.219-.489.489-.489s.489.219.489.489v3.08h.64c.27 0 .489.22.489.489s-.22.488-.49.488zm2.14 0h-.978c-.27 0-.489-.22-.489-.489v-3.568c0-.27.219-.489.489-.489s.489.219.489.489v3.568c0 .27-.22.489-.49.489zm3.567 0h-.977c-.135 0-.259-.055-.347-.145l-1.307-1.341v.997c0 .27-.219.489-.489.489s-.489-.22-.489-.489v-3.568c0-.27.219-.489.489-.489s.489.219.489.489v1.341l1.307 1.342v-1.194c0-.27.219-.489.489-.489s.489.22.489.489v3.568zm3.124 0h-1.631c-.27 0-.489-.22-.489-.489v-3.568c0-.27.219-.489.489-.489h1.631c.27 0 .489.22.489.489s-.219.489-.489.489h-1.142v.693h1.142c.27 0 .489.22.489.489s-.219.489-.489.489h-1.142v.721h1.142c.27 0 .489.22.489.489s-.219.488-.49.488z"/></svg>
-                    <a href="https://line.me/ti/p/463flsij" target="_blank">463flsij</a>
-                </li>
-                <li>
-                    <svg class="footer-icon icon-messenger" viewBox="0 0 24 24"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.16 5.49 3.08 7.4.15.15.24.36.25.58l.04 1.97c.01.55.57.92 1.08.71l2.18-.91c.18-.08.38-.09.56-.04.88.24 1.81.37 2.81.37 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm1.31 12.51l-2.31-2.46-4.51 2.46 4.96-5.27 2.31 2.46 4.51-2.46-4.96 5.27z"/></svg>
-                    <a href="https://m.me/PPMspecial" target="_blank">PPMspecial</a>
-                </li>
-                <li>
-                    <svg class="footer-icon icon-facebook" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    <a href="https://www.facebook.com/PPMspecial/" target="_blank">PPM Special</a>
-                </li>
-                <li>
-                    <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    <a href="mailto:nattamon.s@ppmspecial.com">nattamon.s@ppmspecial.com</a>
-                </li>
+                <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:0824281677">082-428-1677</a></li>
+                <li><svg class="footer-icon icon-line" viewBox="0 0 24 24"><path d="M24 10.304c0-4.369-4.305-7.923-9.591-7.923-5.285 0-9.589 3.554-9.589 7.923 0 3.914 3.411 7.185 8.016 7.828.311.066.735.206.842.473.123.307.081.787.039 1.096l-.168.99c-.051.306-.245 1.196 1.053.652 1.298-.544 7.009-4.128 9.553-7.062.593-.728.845-1.428.845-1.977z"/></svg><a href="https://line.me/ti/p/463flsij" target="_blank">463flsij</a></li>
+                <li><svg class="footer-icon icon-messenger" viewBox="0 0 24 24"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.16 5.49 3.08 7.4.15.15.24.36.25.58l.04 1.97c.01.55.57.92 1.08.71l2.18-.91c.18-.08.38-.09.56-.04.88.24 1.81.37 2.81.37 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2z"/></svg><a href="https://m.me/PPMspecial" target="_blank">PPMspecial</a></li>
+                <li><svg class="footer-icon icon-facebook" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><a href="https://www.facebook.com/PPMspecial/" target="_blank">Facebook: PPM Special</a></li>
+                <li><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:nattamon.s@ppmspecial.com">nattamon.s@ppmspecial.com</a></li>
             </ul>
         </div>
     </div>
-    <p style="text-align:center; margin-top:40px; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
-        &copy; 2026 <span data-i18n="footer_name">หจก. พีพีเอ็ม สเปเชียล</span>. All rights reserved.
-    </p>
+    <p style="text-align:center; margin-top:40px; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">&copy; 2026 <span data-i18n="footer_name">หจก. พีพีเอ็ม สเปเชียล</span>. All rights reserved.</p>
 </footer>
 
 <script>
     const translations = {
         th: {
-            nav_logo: "หจก. พีพีเอ็ม สเปเชียล",
-            nav_about: "เกี่ยวกับเรา", nav_services: "บริการ", nav_projects: "ผลงานอ้างอิง", nav_contact: "ติดต่อเรา",
+            nav_logo: "หจก. พีพีเอ็ม สเปเชียล", nav_about: "เกี่ยวกับเรา", nav_services: "บริการ", nav_projects: "ผลงานอ้างอิง", nav_contact: "ติดต่อเรา",
             hero_title: "ผู้เชี่ยวชาญระบบท่อส่งก๊าซธรรมชาติ <br><span>PPM Special</span>",
             about_exp: "ตั้งแต่ปี 2552", about_title: "ประวัติและความเป็นมา",
             about_p1: "ห้างหุ้นส่วนจำกัด พีพีเอ็ม สเปเชียล ก่อตั้งขึ้นในปี พ.ศ. 2552 มุ่งเน้นงานระบบท่อก๊าซธรรมชาติเป็นหลัก",
-            about_p2: "เราได้รับความไว้วางใจจากบริษัทชั้นนำ อาทิ ปตท. (PTT), TRC และ Italian-Thai ในการดูแลโครงการวิศวกรรมสำคัญระดับประเทศ",
-            stat_capital: "ทุนจดทะเบียน (Registered Capital)",
-            stat_experience: "ประสบการณ์การทำงาน (Years Experience)",
-            scope_title: "ขอบเขตงานบริการของเรา",
-            scope_subtitle: "ครอบคลุมงาน Piping, Mechanical และงานวิศวกรรมโครงสร้างทุกรูปแบบ",
-            client_title: "ความไว้วางใจจากพันธมิตร",
-            prj_title: "โครงการอ้างอิง (Project References)",
+            about_p2: "เราได้รับความไว้วางใจจากบริษัทชั้นนำในการดูแลโครงการสำคัญระดับประเทศ",
+            stat_capital: "ทุนจดทะเบียน (Registered Capital)", stat_experience: "ประสบการณ์การทำงาน (Years Experience)",
+            scope_title: "ขอบเขตงานบริการของเรา", scope_subtitle: "ครอบคลุมงาน Piping, Mechanical และงานวิศวกรรมโครงสร้างทุกรูปแบบ",
+            client_title: "ความไว้วางใจจากพันธมิตร", prj_title: "โครงการอ้างอิง (Project References)",
             prj_instruction: "คลิกที่โครงการเพื่อดูรูปภาพเพิ่มเติม",
-            prj_1_h: "การซ่อมแซมท่อส่งก๊าซธรรมชาติ SN10",
-            prj_2_h: "โครงการติดตั้ง Pig Receiving PTT BV10",
-            prj_3_h: "โครงการลดแรงดันเส้นท่อ BV20",
-            prj_4_h: "ปรับปรุงท่อ Bypass line เส้นท่อ SAI NOI",
-            prj_5_h: "โครงการวางท่อก๊าซ PTT NGV พี.เอ็น.ปิโตรเลียม",
-            prj_6_h: "โครงการวางท่อก๊าซ ปตท. เอ็นทีเอนเนอจี ก๊าซ",
-            prj_7_h: "โครงการปรับปรุง BV1 และเปลี่ยน HV001",
-            prj_8_h: "โครงการติดตั้ง PIG Launcher/Receiver BV 4.19",
-            prj_9_h: "โครงการวางท่อส่งก๊าซจากสถานี OTS#2",
-            prj_10_h: "งานระบบท่อและสถานี Metering - DAIRY PLUS",
-            prj_11_h: "สถานี Metering ก๊าซธรรมชาติ TOP SPP",
-            prj_12_h: "ติดตั้ง Check Meter สถานี Propane",
-            footer_name: "หจก. พีพีเอ็ม สเปเชียล",
-            footer_desc: "ผู้เชี่ยวชาญด้านระบบท่ออุตสาหกรรม คุณภาพ ปลอดภัย ส่งมอบตรงเวลา",
+            prj_1_h: "การซ่อมแซมท่อส่งก๊าซ SN10", prj_2_h: "โครงการติดตั้ง Pig Receiving PTT BV10",
+            prj_3_h: "โครงการลดแรงดันเส้นท่อ BV20", prj_4_h: "ปรับปรุงท่อ Bypass line เส้นท่อ SAI NOI",
+            prj_5_h: "PTT NGV พี.เอ็น.ปิโตรเลียม", prj_6_h: "ปตท. เอ็นทีเอนเนอจี ก๊าซ",
+            prj_7_h: "PTT BV1 MODIFICATION", prj_8_h: "BV 4.19 PIG Launcher/Receiver",
+            prj_9_h: "ท่อส่งก๊าซสถานี OTS#2", prj_10_h: "METERING FOR DAIRY PLUS",
+            prj_11_h: "Metering Station TOP SPP", prj_12_h: "Propane Metering Station",
+            footer_name: "หจก. พีพีเอ็ม สเปเชียล", footer_desc: "ผู้เชี่ยวชาญด้านระบบท่ออุตสาหกรรม คุณภาพ ปลอดภัย ส่งมอบตรงเวลา",
             footer_srv_title: "บริการ", footer_contact_title: "ติดต่อเรา"
         },
         en: {
-            nav_logo: "PPM SPECIAL LIMITED PARTNERSHIP",
-            nav_about: "About", nav_services: "Services", nav_projects: "Project References", nav_contact: "Contact Us",
+            nav_logo: "PPM SPECIAL LTD., PART.", nav_about: "About", nav_services: "Services", nav_projects: "References", nav_contact: "Contact",
             hero_title: "Natural Gas Piping Specialist <br><span>PPM Special</span>",
-            about_exp: "Since 2009", about_title: "Company Profile",
-            about_p1: "PPM Special Ltd., Part. was established in 2009, specializing in Natural Gas pipeline systems.",
-            about_p2: "We are trusted by leading national companies for critical engineering projects.",
-            stat_capital: "Registered Capital",
-            stat_experience: "Years of Experience",
-            scope_title: "Our Scope of Work",
-            scope_subtitle: "Comprehensive Piping, Mechanical, and Structural Engineering",
-            client_title: "Our Trusted Partners",
-            prj_title: "Project References",
-            prj_instruction: "Click on a project to view more images",
-            prj_1_h: "Natural gas pipeline repair at SN10 Station",
-            prj_2_h: "PTT BV10 Pig Receiving Installation Project",
-            prj_3_h: "BV20 Pipeline Pressure Reduction Project",
-            prj_4_h: "Bypass line modification at Block Valve Station (SAI NOI)",
-            prj_5_h: "Natural gas pipeline to PTT NGV P.N. Petroleum",
-            prj_6_h: "Natural gas pipeline to PTT NTN Energy Gas Station",
-            prj_7_h: "PTT BV1 MODIFICATION AND HV001 REPLACEMENT",
-            prj_8_h: "BV 4.19 PIG Launcher and Receiver Installation",
-            prj_9_h: "Natural gas pipeline from OTS#2 to Station No.2",
-            prj_10_h: "NG PIPELINE & METERING STATION FOR DAIRY PLUS",
-            prj_11_h: "NG Metering Station TOP SPP",
-            prj_12_h: "Add Check Meter for Existing Propane Station",
-            footer_name: "PPM SPECIAL LIMITED PARTNERSHIP",
-            footer_desc: "Industrial piping specialists. Quality, safety, and on-time delivery.",
+            about_exp: "Established 2009", about_title: "Company Profile",
+            about_p1: "PPM Special Ltd., Part. was established in 2009, specializing in Natural Gas systems.",
+            about_p2: "Trusted by PTT, TRC, and Italian-Thai for critical engineering projects.",
+            stat_capital: "Registered Capital", stat_experience: "Years of Excellence",
+            scope_title: "Our Scope of Work", scope_subtitle: "Comprehensive Piping, Mechanical, and Structural Engineering",
+            client_title: "Our Trusted Partners", prj_title: "Project References",
+            prj_instruction: "Click on project to view gallery",
+            prj_1_h: "Pipeline repair at SN10 Station", prj_2_h: "PTT BV10 Pig Receiving Project",
+            prj_3_h: "BV20 Pressure Reduction Project", prj_4_h: "Bypass line at SAI NOI Station",
+            prj_5_h: "PTT NGV P.N. Petroleum", prj_6_h: "PTT NTN Energy Gas Station",
+            prj_7_h: "PTT BV1 MODIFICATION", prj_8_h: "BV 4.19 PIG Launcher/Receiver",
+            prj_9_h: "Pipeline at OTS#2 Station", prj_10_h: "METERING FOR DAIRY PLUS",
+            prj_11_h: "Metering Station TOP SPP", prj_12_h: "Propane Metering Station",
+            footer_name: "PPM SPECIAL LIMITED PARTNERSHIP", footer_desc: "Industrial piping specialists. Quality, safety, and on-time delivery.",
             footer_srv_title: "Services", footer_contact_title: "Contact Us"
         }
     };
 
     let currentLang = 'th';
-
     function setLanguage(lang) {
         currentLang = lang;
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.innerText.toLowerCase() === lang));
@@ -526,68 +360,25 @@
         });
     }
 
-    // --- Lightbox System ---
-    let currentProjectId = "";
-    let currentIndex = 1;
-    let currentMaxImages = 0;
-    let currentTitleKey = "";
-
+    // Lightbox System
+    let currentProjectId = ""; let currentIndex = 1; let currentMaxImages = 0; let currentTitleKey = "";
     function openLightbox(prefix, count, titleKey) {
-        currentProjectId = prefix;
-        currentMaxImages = count;
-        currentTitleKey = titleKey;
-        currentIndex = 1;
-        updateLightboxContent();
-        document.getElementById('lbModal').style.display = "flex";
-        document.body.style.overflow = "hidden";
+        currentProjectId = prefix; currentMaxImages = count; currentTitleKey = titleKey; currentIndex = 1;
+        updateLightboxContent(); document.getElementById('lbModal').style.display = "flex"; document.body.style.overflow = "hidden";
     }
-
-    function closeLightbox() {
-        document.getElementById('lbModal').style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-
-    function changeImage(n) {
-        currentIndex += n;
-        if (currentIndex > currentMaxImages) currentIndex = 1;
-        if (currentIndex < 1) currentIndex = currentMaxImages;
-        updateLightboxContent();
-    }
-
+    function closeLightbox() { document.getElementById('lbModal').style.display = "none"; document.body.style.overflow = "auto"; }
+    function changeImage(n) { currentIndex += n; if (currentIndex > currentMaxImages) currentIndex = 1; if (currentIndex < 1) currentIndex = currentMaxImages; updateLightboxContent(); }
     function updateLightboxContent() {
         const img = document.getElementById('lbImg');
-        const counter = document.getElementById('lbCounter');
-        const caption = document.getElementById('lbCaption');
         img.src = `images/${currentProjectId}-${currentIndex}.JPG`;
-        counter.innerText = `${currentIndex} / ${currentMaxImages}`;
-        caption.innerText = translations[currentLang][currentTitleKey];
+        document.getElementById('lbCounter').innerText = `${currentIndex} / ${currentMaxImages}`;
+        document.getElementById('lbCaption').innerText = translations[currentLang][currentTitleKey];
     }
-
-    window.onclick = function(event) {
-        const modal = document.getElementById('lbModal');
-        if (event.target == modal) closeLightbox();
-    }
-
-    window.addEventListener('keydown', (e) => {
-        if (document.getElementById('lbModal').style.display === "flex") {
-            if (e.key === "ArrowLeft") changeImage(-1);
-            if (e.key === "ArrowRight") changeImage(1);
-            if (e.key === "Escape") closeLightbox();
-        }
-    });
 
     window.addEventListener('scroll', () => {
         const nav = document.getElementById('navbar');
-        if (window.scrollY > 50) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-    });
-
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => { }, 150);
+        nav.classList.toggle('scrolled', window.scrollY > 50);
     });
 </script>
-
 </body>
 </html>
