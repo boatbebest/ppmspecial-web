@@ -51,7 +51,7 @@
         .btn-phone { background: var(--color-accent); }
         .btn-line { background: var(--color-line); }
 
-        /* --- About & Sections --- */
+        /* --- About --- */
         .section { padding: 100px 10%; }
         .about-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: flex-start; }
         .about-text { max-width: 680px; }
@@ -62,7 +62,7 @@
         .stat-item h3 { color: var(--color-accent); font-size: 2.5rem; margin-bottom: 8px; }
         .stat-item p { color: var(--color-text-light); font-weight: 500; font-size: 0.95rem; }
 
-        /* --- Video Section Styles --- */
+        /* --- Video Section --- */
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .video-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: var(--transition); }
         .video-card:hover { transform: translateY(-10px); }
@@ -70,13 +70,13 @@
         .video-container video { width: 100%; height: 100%; object-fit: cover; filter: grayscale(40%); transition: all 0.6s ease; }
         .video-card.playing video { filter: grayscale(0%); transform: scale(1.02); }
         .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 10; }
-        .play-hint { position: absolute; top: 15px; right: 15px; background: rgba(0, 102, 255, 0.8); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; transition: 0.3s; z-index: 11; }
-        .video-card.playing .play-hint { opacity: 0; transform: translateY(-10px); }
+        .play-hint { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0, 102, 255, 0.9); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; transition: 0.3s; z-index: 11; pointer-events: none; }
+        .video-card.playing .play-hint { opacity: 0; transform: translate(-50%, 10px); }
         .video-info { padding: 20px; text-align: center; }
         .video-info h4 { color: var(--color-primary); margin-bottom: 8px; font-size: 1.1rem; }
         .video-info p { font-size: 0.9rem; color: var(--color-text-light); }
 
-        /* --- Client Logos --- */
+        /* --- Clients --- */
         .clients-section { background: #fff; text-align: center; padding: 100px 5%; border-top: 1px solid #eee; }
         .client-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center; margin-top: 50px; max-width: 1200px; margin-left: auto; margin-right: auto; }
         .client-item { width: 180px; height: 100px; display: flex; align-items: center; justify-content: center; }
@@ -169,7 +169,7 @@
     </div>
 </section>
 
-<!-- Section: Operations (Videos with Smart Focus) -->
+<!-- Section: Operations (Videos) -->
 <section class="section" id="operations" style="background: #fff; border-top: 1px solid #eee;">
     <div class="section-title">
         <h2 data-i18n="ops_title" style="color:var(--color-primary);">มาตรฐานการปฏิบัติงานและเครื่องจักร</h2>
@@ -180,11 +180,12 @@
         <!-- Video 1 -->
         <div class="video-card">
             <div class="video-container">
+                <!-- สำคัญ: ห้ามใส่คำว่า autoplay ใน tag video เด็ดขาด -->
                 <video muted loop playsinline poster="images/Vibro_poster.jpg" class="op-video">
                     <source src="videos/Vibro.mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay" oncontextmenu="return false;">
-                    <div class="play-hint"><span>WATCH VIDEO</span></div>
+                    <div class="play-hint"><span data-i18n="play_hint">MOUSE OVER TO PLAY</span></div>
                 </div>
             </div>
             <div class="video-info">
@@ -200,7 +201,7 @@
                     <source src="videos/Pipe_transport.mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay" oncontextmenu="return false;">
-                    <div class="play-hint"><span>WATCH VIDEO</span></div>
+                    <div class="play-hint"><span data-i18n="play_hint">MOUSE OVER TO PLAY</span></div>
                 </div>
             </div>
             <div class="video-info">
@@ -216,7 +217,7 @@
                     <source src="videos/Pipe_install.mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay" oncontextmenu="return false;">
-                    <div class="play-hint"><span>WATCH VIDEO</span></div>
+                    <div class="play-hint"><span data-i18n="play_hint">MOUSE OVER TO PLAY</span></div>
                 </div>
             </div>
             <div class="video-info">
@@ -246,7 +247,6 @@
         <p style="color: #a0aec0;" data-i18n="prj_instruction">คลิกที่โครงการเพื่อดูรูปภาพเพิ่มเติม</p>
     </div>
     <div class="project-grid">
-        <!-- ครบทั้ง 12 โครงการ -->
         <div class="project-card" onclick="openLightbox('SN10', 4, 'prj_1_h')">
             <div class="bg-img" style="background-image: url('images/SN10-1.JPG');"></div>
             <div class="project-overlay"><span class="date">2024-2023</span><h4 data-i18n="prj_1_h">การซ่อมแซมท่อส่งก๊าซ SN10</h4></div>
@@ -350,6 +350,7 @@
             v1_h: "Sheet Pile Driving", v1_p: "งานตอกเข็มเหล็กป้องกันดินสไลด์ด้วย Vibro PC300",
             v2_h: "Logistics & Transport", v2_p: "การขนย้ายท่อก๊าซธรรมชาติด้วยเครื่องจักรหนักอย่างปลอดภัย",
             v3_h: "Pipeline Installation", v3_p: "กระบวนการวางท่อลงร่องขุดตามมาตรฐานวิศวกรรม",
+            play_hint: "ชี้เมาส์เพื่อเล่นวิดีโอ",
             client_title: "ความไว้วางใจจากลูกค้า", prj_title: "โครงการอ้างอิง (Project References)",
             prj_instruction: "คลิกที่โครงการเพื่อดูรูปภาพเพิ่มเติม",
             prj_1_h: "การซ่อมแซมท่อส่งก๊าซ SN10", prj_2_h: "PTT BV10 Pig Receiving Project", prj_3_h: "BV20 Pressure Reduction Project",
@@ -372,6 +373,7 @@
             v1_h: "Sheet Pile Driving", v1_p: "Steel sheet pile installation using Vibro PC300",
             v2_h: "Logistics & Transport", v2_p: "Safe transportation of natural gas pipes using heavy machinery",
             v3_h: "Pipeline Installation", v3_p: "Precision pipe lowering process following engineering standards",
+            play_hint: "MOUSE OVER TO PLAY",
             client_title: "Trusted by Our Clients", prj_title: "Project References",
             prj_instruction: "Click on project to view gallery",
             prj_1_h: "Pipeline repair at SN10 Station", prj_2_h: "PTT BV10 Pig Receiving Project", prj_3_h: "BV20 Pressure Reduction Project",
@@ -409,38 +411,51 @@
         document.getElementById('lbCaption').innerText = translations[currentLang][currentTitleKey] || "Project Reference";
     }
 
-    // --- Smart Video Control Logic ---
+    // --- Smart Video Logic (Fixed for Desktop Simultaneous Play) ---
     const videos = document.querySelectorAll('.op-video');
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
 
-    // 1. Desktop: Hover to Play
-    videos.forEach(video => {
-        const card = video.closest('.video-card');
-        card.addEventListener('mouseenter', () => {
-            video.play();
-            card.classList.add('playing');
-        });
-        card.addEventListener('mouseleave', () => {
-            video.pause();
-            card.classList.remove('playing');
+    // ระบบป้องกัน: สั่งหยุดวิดีโอทันทีที่โหลดหน้าเสร็จ (บางเบราว์เซอร์อาจพยายามเล่นเอง)
+    window.addEventListener('load', () => {
+        videos.forEach(v => {
+            v.pause();
+            v.currentTime = 0;
         });
     });
 
-    // 2. Mobile/Scroll: Intersection Observer (Play when in view)
-    const observerOptions = { root: null, threshold: 0.6 };
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const video = entry.target;
+    if (isDesktop) {
+        // --- 1. สำหรับคอมพิวเตอร์: เล่นเฉพาะเมื่อเอาเมาส์ชี้เท่านั้น ---
+        videos.forEach(video => {
             const card = video.closest('.video-card');
-            if (entry.isIntersecting) {
+            
+            // ปิดระบบ Observer สำหรับ Desktop เพื่อไม่ให้เล่นพร้อมกัน
+            card.addEventListener('mouseenter', () => {
                 video.play();
                 card.classList.add('playing');
-            } else {
+            });
+            card.addEventListener('mouseleave', () => {
                 video.pause();
                 card.classList.remove('playing');
-            }
+            });
         });
-    }, observerOptions);
-    videos.forEach(video => observer.observe(video));
+    } else {
+        // --- 2. สำหรับมือถือ: เล่นเมื่อเลื่อนมาถึงกึ่งกลางจอ ---
+        const observerOptions = { root: null, threshold: 0.7 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                const card = video.closest('.video-card');
+                if (entry.isIntersecting) {
+                    video.play();
+                    card.classList.add('playing');
+                } else {
+                    video.pause();
+                    card.classList.remove('playing');
+                }
+            });
+        }, observerOptions);
+        videos.forEach(video => observer.observe(video));
+    }
 
     // Navbar Scroll Effect
     window.addEventListener('scroll', () => {
