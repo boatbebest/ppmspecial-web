@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="images/LOGO-PPM.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO -->
     <title>หจก. พีพีเอ็ม สเปเชียล (PPM Special) | รับเหมาติดตั้งและวางระบบท่อก๊าซธรรมชาติ และท่อน้ำมัน</title>
     <meta name="description" content="PPM Special (พีพีเอ็ม สเปเชียล) รับเหมาติดตั้งระบบท่อส่งก๊าซธรรมชาติ งานเชื่อมมาตรฐานสากล (WPS/PQR) ประสบการณ์กว่า 15 ปี">
     <meta name="keywords" content="PPM Special, พีพีเอ็ม สเปเชียล, ระบบท่อส่งก๊าซ, งานเชื่อมท่ออุตสาหกรรม, Piping Installation">
@@ -27,7 +26,7 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Kanit', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; overflow-x: hidden; }
-
+        
         /* --- Navbar --- */
         nav { position: fixed; top: 0; width: 100%; padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; transition: var(--transition); background: transparent; }
         nav.scrolled { background: rgba(255, 255, 255, 0.98) !important; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); padding: 0.8rem 5%; }
@@ -42,7 +41,7 @@
         .lang-btn { padding: 6px 12px; border: none; background: transparent; font-weight: 600; font-size: 0.8rem; cursor: pointer; color: var(--color-white); }
         nav.scrolled .lang-btn { color: var(--color-text-light); }
         .lang-btn.active { background: var(--color-accent); color: var(--color-white) !important; }
-
+        
         /* --- Hero --- */
         .hero { height: 85vh; min-height: 600px; background: linear-gradient(135deg, rgba(10,37,64,0.85) 0%, rgba(10,37,64,0.7) 100%), url('images/BG.png'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; padding: 0 10%; color: var(--color-white); }
         .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
@@ -51,17 +50,49 @@
         .btn { padding: 12px 25px; border-radius: 8px; font-weight: 500; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; color: var(--color-white); }
         .btn-phone { background: var(--color-accent); }
         .btn-line { background: var(--color-line); }
-
-        /* --- About --- */
+        
+        /* --- General Section --- */
         .section { padding: 100px 10%; }
-        .about-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: flex-start; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--color-primary); font-weight: 700;}
+        
+        /* --- About (History & Stats) --- */
+        .about-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: flex-start; max-width: 1300px; margin: 0 auto; }
         .about-text { max-width: 680px; }
         .experience-badge { background: var(--color-accent); color: white; display: inline-block; padding: 8px 20px; border-radius: 6px; font-weight: 600; margin-bottom: 25px; letter-spacing: 0.5px; font-size: 0.9rem; }
-        .about-text h2 { font-size: 2.4rem; color: var(--color-primary); margin-bottom: 30px; line-height: 1.2; font-weight: 700; }
-        .about-text p { margin-bottom: 25px; line-height: 1.9; color: var(--color-text-light); text-align: justify; text-justify: inter-word; font-size: 1.05rem; }
+        .about-text h2 { font-size: 2.8rem; color: var(--color-primary); margin-bottom: 30px; font-weight: 700; line-height: 1.1; }
+        /* แก้ไขการจัดเรียงข้อความตรงนี้ ให้เป็นชิดซ้าย (left) เพื่อไม่ให้มีช่องว่างห่างๆ */
+        .about-text p { margin-bottom: 20px; line-height: 1.8; color: var(--color-text-light); font-size: 1.1rem; text-align: left; }
         .about-stats-card { background: #fff; padding: 45px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.03); }
         .stat-item h3 { color: var(--color-accent); font-size: 2.5rem; margin-bottom: 8px; }
         .stat-item p { color: var(--color-text-light); font-weight: 500; font-size: 0.95rem; }
+        
+        /* --- Vision & Mission --- */
+        .vm-section { background-color: #0a192f; color: white; padding: 80px 10%; }
+        .vm-container { max-width: 800px; margin: 0 auto; }
+        .vm-item { margin-bottom: 40px; }
+        .vm-item h3 { color: #4db3ff; font-size: 2rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        /* แก้ไขการจัดเรียงข้อความตรงนี้ ให้เป็นชิดซ้ายเช่นกัน */
+        .vm-item p { font-size: 1.15rem; line-height: 1.8; opacity: 0.95; text-align: left; }
+
+        /* --- Our Service --- */
+        .service-category { margin-bottom: 70px; }
+        .service-header { display: inline-block; background-color: var(--color-accent); color: white; padding: 15px 40px; font-size: 1.3rem; font-weight: 700; margin-bottom: 30px; border-radius: 4px; }
+        .service-list { list-style: none; margin-bottom: 40px; }
+        .service-list li { font-size: 1.1rem; font-weight: 600; color: var(--color-primary); margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px; text-transform: uppercase; }
+        .service-list li::before { content: "➤"; color: var(--color-accent); font-size: 1.2rem; margin-top: -2px; }
+        .service-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .service-gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; border: 4px solid #e2e8f0; }
+
+        /* --- Fleet & Machinery --- */
+        .fleet-section { background-color: #fff; border-top: 1px solid #eee; }
+        .fleet-desc { font-size: 1.1rem; color: var(--color-text-light); max-width: 800px; margin: 0 auto 50px auto; text-align: center; }
+        .fleet-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 25px; }
+        .fleet-item { display: flex; align-items: flex-start; gap: 20px; }
+        .fleet-item::before { content: "●"; color: var(--color-primary); font-size: 1.5rem; line-height: 1; }
+        .fleet-name { font-weight: 700; color: var(--color-accent); font-size: 1.2rem; min-width: 250px; text-transform: uppercase; }
+        .fleet-details { color: var(--color-primary); font-size: 1.1rem; }
+        .highlight-unit { color: var(--color-accent); font-weight: 600; }
 
         /* --- Video Section --- */
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
@@ -76,7 +107,7 @@
         .video-info { padding: 20px; text-align: center; }
         .video-info h4 { color: var(--color-primary); margin-bottom: 8px; font-size: 1.1rem; }
         .video-info p { font-size: 0.9rem; color: var(--color-text-light); }
-
+        
         /* --- Clients --- */
         .clients-section { background: #fff; text-align: center; padding: 100px 5%; border-top: 1px solid #eee; }
         .client-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center; margin-top: 50px; max-width: 1200px; margin-left: auto; margin-right: auto; }
@@ -86,8 +117,6 @@
 
         /* --- Projects --- */
         .projects-section { background: #0a192f; color: white; padding: 100px 10%; }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--color-primary); }
         .projects-section .section-title h2 { color: white; }
         .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; }
         .project-card { background: #1a365d; border-radius: var(--radius); overflow: hidden; position: relative; aspect-ratio: 4/3; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); cursor: pointer; }
@@ -97,7 +126,7 @@
         .project-overlay { position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; display: flex; flex-direction: column; justify-content: flex-end; padding: 30px 20px; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, transparent 100%); }
         .project-overlay .date { font-size: 0.85rem; color: #4db3ff; font-weight: 700; margin-bottom: 6px; }
         .project-overlay h4 { font-size: 1rem; color: #ffffff; font-weight: 500; }
-
+        
         /* --- Lightbox --- */
         .lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); justify-content: center; align-items: center; padding: 20px; }
         .lightbox-content { max-width: 90%; max-height: 80vh; object-fit: contain; animation: zoom 0.3s ease-out; }
@@ -106,7 +135,7 @@
         .lb-next { right: 20px; } .lb-prev { left: 20px; }
         .lb-caption { position: absolute; bottom: 40px; color: #fff; text-align: center; width: 100%; font-size: 1.1rem; }
         .lb-counter { position: absolute; top: 20px; left: 30px; color: #fff; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 20px; }
-
+        
         /* --- Footer --- */
         footer { background: #051626; color: #a0aec0; padding: 80px 10% 40px; border-top: 2px solid var(--color-accent); }
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 40px; }
@@ -114,19 +143,26 @@
         .footer-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 12px; }
         .footer-list a { color: #a0aec0; text-decoration: none; transition: 0.3s; }
         .footer-icon { width: 20px; height: 20px; fill: currentColor; }
-
+        
         @keyframes zoom { from {transform:scale(0)} to {transform:scale(1)} }
         @media (max-width: 992px) { .about-container { grid-template-columns: 1fr; gap: 40px; } }
-        @media (max-width: 768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } .client-item { width: 40%; height: 80px; } }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; } 
+            .footer-grid { grid-template-columns: 1fr; } 
+            .client-item { width: 40%; height: 80px; } 
+            .fleet-item { flex-direction: column; gap: 5px; }
+            .fleet-name { min-width: auto; }
+        }
     </style>
 </head>
 <body>
 
 <nav id="navbar">
-    <div class="logo" data-i18n="nav_logo">ห้างหุ้นส่วนจำกัด พีพีเอ็ม สเปเชียล</div>
+    <div class="logo" data-i18n="nav_logo">หจก. พีพีเอ็ม สเปเชียล</div>
     <div class="nav-right">
         <ul class="nav-links">
             <li><a href="#about" data-i18n="nav_about">เกี่ยวกับเรา</a></li>
+            <li><a href="#services" data-i18n="nav_service">บริการของเรา</a></li>
             <li><a href="#operations" data-i18n="nav_ops">การปฏิบัติงาน</a></li>
             <li><a href="#projects" data-i18n="nav_projects">ผลงานอ้างอิง</a></li>
             <li><a href="#contact" data-i18n="nav_contact">ติดต่อเรา</a></li>
@@ -146,14 +182,18 @@
     </div>
 </div>
 
+<!-- History & Stats Section -->
 <section class="section" id="about">
     <div class="about-container">
+        <!-- ฝั่งซ้าย: ประวัติ -->
         <div class="about-text">
             <div class="experience-badge" data-i18n="about_exp">ตั้งแต่ปี 2552</div>
-            <h2 data-i18n="about_title">ประวัติและความเป็นมา</h2>
-            <p data-i18n="about_p1">หจก. พีพีเอ็ม สเปเชียล เชี่ยวชาญงานวิศวกรรมติดตั้งระบบก๊าซธรรมชาติครบวงจร โดยมุ่งเน้นการดำเนินงานตามมาตรฐานสากล และความปลอดภัยสูงสุดเป็นสำคัญ</p>
-            <p data-i18n="about_p2">เราได้รับความไว้วางใจ ให้เป็นส่วนหนึ่งของโครงการโครงสร้างพื้นฐานระดับประเทศอย่างต่อเนื่อง ด้วยทีมงานมืออาชีพที่พร้อมส่งมอบงานคุณภาพ ตรงต่อเวลา และตอบโจทย์ความต้องการของกลุ่มลูกค้าอุตสาหกรรมพลังงานชั้นนำ</p>
+            <h2 data-i18n="history_title">ประวัติความเป็นมา</h2>
+            <p data-i18n="history_p1">ห้างหุ้นส่วนจำกัด พีพีเอ็ม สเปเชียล ก่อตั้งขึ้นในปี พ.ศ. 2552 โดยคุณสมพงษ์ สุขสมบูรณ์ มุ่งเน้นดำเนินธุรกิจรับเหมาก่อสร้าง และวางระบบท่อส่งแก๊สธรรมชาติ และท่อน้ำมันแบบครบวงจร ด้วยศักยภาพของผู้บริหาร ประสิทธิภาพของทีมงาน ตลอดจนผลงานอันเป็นที่ประจักษ์ พีพีเอ็มจึงได้รับความไว้วางใจจากลูกค้าให้ดูแลโครงการที่ขยายตัวเพิ่มขึ้นอย่างต่อเนื่อง จนก้าวสู่การเป็นผู้เชี่ยวชาญที่มีชื่อเสียงและได้รับความน่าเชื่อถือในวงการ</p>
+            <p data-i18n="history_p2">ปัจจุบันแม้โครงสร้างการบริหารจะส่งต่อมายังคุณนัทธมน สุขสมบูรณ์ แต่พีพีเอ็มยังคงรักษามาตรฐานและนโยบายคุณภาพเดิมไว้อย่างเหนียวแน่น</p>
+            <p data-i18n="history_p3">ท่ามกลางการแข่งขันสูงในปัจจุบัน พีพีเอ็มยังคงมุ่งมั่นสร้างสรรค์ผลงานที่เป็นเลิศ ควบคุมคุณภาพเข้มงวดทุกขั้นตอน เพื่อตอบสนองความพึงพอใจสูงสุดของลูกค้าเสมอมา</p>
         </div>
+        <!-- ฝั่งขวา: สถิติทุนจดทะเบียน & ประสบการณ์ -->
         <div class="about-stats">
             <div class="about-stats-card">
                 <div class="stat-item">
@@ -170,18 +210,118 @@
     </div>
 </section>
 
+<!-- Vision & Mission Section -->
+<section class="vm-section">
+    <div class="vm-container">
+        <div class="vm-item">
+            <h3 data-i18n="vision_title">วิสัยทัศน์ (VISION)</h3>
+            <p data-i18n="vision_desc">มุ่งสู่การเป็นผู้นำด้านงานรับเหมาวางระบบท่อส่งแก๊สธรรมชาติ และท่อน้ำมันระดับแนวหน้า ที่ขับเคลื่อนด้วยทีมงานมืออาชีพ และการบริการที่เป็นเลิศ เพื่อการเติบโตอย่างยั่งยืนร่วมกับคู่ค้า</p>
+        </div>
+        <div class="vm-item">
+            <h3 data-i18n="mission_title">พันธกิจ (MISSION)</h3>
+            <p data-i18n="mission_desc">สร้างความพึงพอใจสูงสุดแก่ลูกค้า ผ่านการบริหารจัดการโครงการอย่างมืออาชีพ ตรงต่อเวลา และซื่อสัตย์ต่อสัญญา มุ่งเน้นความสัมพันธ์ระยะยาว</p>
+        </div>
+    </div>
+</section>
+
+<!-- Our Service Section -->
+<section class="section" id="services">
+    <div class="section-title">
+        <h2 data-i18n="svc_main_title">Our Service</h2>
+    </div>
+
+    <!-- Service 1 -->
+    <div class="service-category">
+        <div class="service-header" data-i18n="svc_1_title">PIPELINE & UNDERGROUND WORK</div>
+        <ul class="service-list">
+            <li data-i18n="svc_1_item1">SHEETPILE INSTALLATION PIT, OPENC-CUT AND TENCHING WORK</li>
+            <li data-i18n="svc_1_item2">PIPELINE FABRICATION, FIELD JOINT COATING AND HOLIDAY TEST</li>
+            <li data-i18n="svc_1_item3">PIPELINE HYDROSTATIC TEST, CLEANING AND FLUSHING</li>
+        </ul>
+        <div class="service-gallery">
+            <img src="images/service_pipeline_1.jpg" alt="Pipeline Work">
+            <img src="images/service_pipeline_2.jpg" alt="Pipeline Work">
+            <img src="images/service_pipeline_3.jpg" alt="Pipeline Work">
+        </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-category">
+        <div class="service-header" data-i18n="svc_2_title">PIPING & MRS</div>
+        <ul class="service-list">
+            <li data-i18n="svc_2_item1">PIPING FABRICATION AND INSTALLATION</li>
+            <li data-i18n="svc_2_item2">PIPE SUPPORT FABRICATION AND INSTALLATION</li>
+            <li data-i18n="svc_2_item3">METERING SKID & SHELTER FABRICATION INSTALLATION</li>
+            <li data-i18n="svc_2_item4">MECHANICAL INSTALLATION</li>
+            <li data-i18n="svc_2_item5">CIVIL WORKS AND METERING FOUNDATIONS</li>
+        </ul>
+        <div class="service-gallery">
+            <img src="images/service_piping_1.jpg" alt="Piping Work">
+            <img src="images/service_piping_2.jpg" alt="Piping Work">
+            <img src="images/service_piping_3.jpg" alt="Piping Work">
+        </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-category">
+        <div class="service-header" data-i18n="svc_3_title">OTHERS</div>
+        <ul class="service-list">
+            <li data-i18n="svc_3_item1">MANPOWER SUPPLY, CERTIFICATED WELDER</li>
+            <li data-i18n="svc_3_item2">MACHINERY FOR RENT</li>
+            <li data-i18n="svc_3_item3">EXCAVATOR RENTAL WITH OPERATOR AND TRUCK RENTAL WITH DRIVER</li>
+            <li data-i18n="svc_3_item4">VIBRATORY HAMMER/ PILE DRIVER RENTAL WITH OPERATOR & SUPPORT CREW</li>
+            <li data-i18n="svc_3_item5">GENERAL STEEL & STAINLESS STEEL WELDING SERVICES</li>
+        </ul>
+        <div class="service-gallery">
+            <img src="images/service_others_1.jpg" alt="Other Services">
+            <img src="images/service_others_2.jpg" alt="Other Services">
+            <img src="images/service_others_3.jpg" alt="Other Services">
+        </div>
+    </div>
+</section>
+
+<!-- Our Fleet & Machinery -->
+<section class="section fleet-section">
+    <div class="section-title">
+        <h2 data-i18n="fleet_title">Our Fleet & Machinery</h2>
+    </div>
+    <p class="fleet-desc" data-i18n="fleet_desc">We maintain a fleet of reliable heavy machinery complete with certified operators and ground support crews ready to execute projects seamlessly and efficiently.</p>
+    
+    <div class="fleet-list">
+        <div class="fleet-item">
+            <div class="fleet-name">EXCAVATORS</div>
+            <div class="fleet-details">PC40 <span class="highlight-unit">1 Unit</span>, PC128 <span class="highlight-unit">1 Unit</span> and PC200 <span class="highlight-unit">1 Unit</span></div>
+        </div>
+        <div class="fleet-item">
+            <div class="fleet-name">VIBRO HAMMERS</div>
+            <div class="fleet-details">PC300 <span class="highlight-unit">1 Unit</span></div>
+        </div>
+        <div class="fleet-item">
+            <div class="fleet-name">VEHICLES & TRUCKS</div>
+            <div class="fleet-details">
+                6-Wheel Dump Truck <span class="highlight-unit">1 Unit</span><br>
+                6-Wheel Boom Truck <span class="highlight-unit">1 Unit</span><br>
+                12-Wheel Lowbed Trailer <span class="highlight-unit">1 Unit</span><br>
+                Tractor Head with Semi-Trailer <span class="highlight-unit">1 Unit</span>
+            </div>
+        </div>
+        <div class="fleet-item">
+            <div class="fleet-name">AUXILIARY EQUIPMENT</div>
+            <div class="fleet-details">Generators, Welders, Compaction Equipment, Holiday Detector and others</div>
+        </div>
+    </div>
+</section>
+
 <!-- Section: Operations (Videos) -->
 <section class="section" id="operations" style="background: #fff; border-top: 1px solid #eee;">
     <div class="section-title">
         <h2 data-i18n="ops_title" style="color:var(--color-primary);">มาตรฐานการปฏิบัติงานและเครื่องจักร</h2>
         <p data-i18n="ops_subtitle" style="color: var(--color-text-light);">เราใช้เครื่องจักรเฉพาะทางและทีมงานที่เชี่ยวชาญ เพื่อความปลอดภัยและแม่นยำสูงสุด</p>
     </div>
-    
+
     <div class="video-grid">
-        <!-- Video 1 -->
         <div class="video-card">
             <div class="video-container">
-                <!-- สำคัญ: ห้ามใส่คำว่า autoplay ใน tag video เด็ดขาด -->
                 <video muted loop playsinline poster="images/Vibro_poster.jpg" class="op-video">
                     <source src="videos/Vibro.mp4" type="video/mp4">
                 </video>
@@ -194,8 +334,6 @@
                 <p data-i18n="v1_p">งานตอกเข็มเหล็กป้องกันดินสไลด์ด้วย Vibro PC300</p>
             </div>
         </div>
-
-        <!-- Video 2 -->
         <div class="video-card">
             <div class="video-container">
                 <video muted loop playsinline poster="images/Transport_poster.jpg" class="op-video">
@@ -210,8 +348,6 @@
                 <p data-i18n="v2_p">การขนย้ายท่อก๊าซธรรมชาติด้วยเครื่องจักรหนักอย่างปลอดภัย</p>
             </div>
         </div>
-
-        <!-- Video 3 -->
         <div class="video-card">
             <div class="video-container">
                 <video muted loop playsinline poster="images/Install_poster.jpg" class="op-video">
@@ -229,6 +365,7 @@
     </div>
 </section>
 
+<!-- Section: Clients -->
 <section class="clients-section">
     <h3 data-i18n="client_title" style="color:var(--color-primary); font-size: 1.8rem; margin-bottom: 10px;">ความไว้วางใจจากลูกค้า</h3>
     <div class="client-grid">
@@ -242,6 +379,7 @@
     </div>
 </section>
 
+<!-- Section: Projects -->
 <section class="section projects-section" id="projects">
     <div class="section-title">
         <h2 data-i18n="prj_title">โครงการอ้างอิง (Project References)</h2>
@@ -299,6 +437,7 @@
     </div>
 </section>
 
+<!-- Lightbox Modal -->
 <div id="lbModal" class="lightbox">
     <span class="lb-close" onclick="closeLightbox()">&times;</span>
     <div class="lb-counter" id="lbCounter">1 / 4</div>
@@ -308,6 +447,7 @@
     <div class="lb-caption" id="lbCaption">ชื่อโครงการ</div>
 </div>
 
+<!-- Footer -->
 <footer id="contact">
     <div class="footer-grid">
         <div>
@@ -317,19 +457,19 @@
         <div>
             <h4 style="color:#fff; margin-bottom: 20px;" data-i18n="footer_srv_title">บริการ</h4>
             <ul class="footer-list">
-                <li>Piping Installation</li>
-                <li>Mechanical Work</li>
-                <li>Flushing & Testing</li>
-                <li>Structure Fabrication</li>
+                <li><a href="#services">Piping Installation</a></li>
+                <li><a href="#services">Mechanical Work</a></li>
+                <li><a href="#services">Flushing & Testing</a></li>
+                <li><a href="#services">Structure Fabrication</a></li>
             </ul>
         </div>
         <div>
             <h4 style="color:#fff; margin-bottom: 20px;" data-i18n="footer_contact_title">ติดต่อเรา</h4>
             <ul class="footer-list">
                 <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:038565168">038-565-168</a></li>
-                <li><svg class="footer-icon icon-line" viewBox="0 0 24 24"><path d="M24 10.304c0-4.369-4.305-7.923-9.591-7.923-5.285 0-9.589 3.554-9.589 7.923 0 3.914 3.411 7.185 8.016 7.828.311.066.735.206.842.473.123.307.081.787.039 1.096l-.168.99c-.051.306-.245 1.196 1.053.652 1.298-.544 7.009-4.128 9.553-7.062.593-.728.845-1.428.845-1.977z"/></svg><a href="https://line.me/ti/p/@ppmspecial" target="_blank">@ppmspecial</a></li>
-                <li><svg class="footer-icon icon-messenger" viewBox="0 0 24 24"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.16 5.49 3.08 7.4.15.15.24.36.25.58l.04 1.97c.01.55.57.92 1.08.71l2.18-.91c.18-.08.38-.09.56-.04.88.24 1.81.37 2.81.37 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2z"/></svg><a href="https://m.me/PPMspecial" target="_blank">PPMspecial</a></li>
-                <li><svg class="footer-icon icon-facebook" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><a href="https://www.facebook.com/PPMspecial/" target="_blank">PPM Special</a></li>
+                <li><svg class="footer-icon icon-line" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-4.369-4.305-7.923-9.591-7.923-5.285 0-9.589 3.554-9.589 7.923 0 3.914 3.411 7.185 8.016 7.828.311.066.735.206.842.473.123.307.081.787.039 1.096l-.168.99c-.051.306-.245 1.196 1.053.652 1.298-.544 7.009-4.128 9.553-7.062.593-.728.845-1.428.845-1.977z"/></svg><a href="https://line.me/ti/p/@ppmspecial" target="_blank">@ppmspecial</a></li>
+                <li><svg class="footer-icon icon-messenger" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.16 5.49 3.08 7.4.15.15.24.36.25.58l.04 1.97c.01.55.57.92 1.08.71l2.18-.91c.18-.08.38-.09.56-.04.88.24 1.81.37 2.81.37 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2z"/></svg><a href="https://m.me/PPMspecial" target="_blank">PPMspecial</a></li>
+                <li><svg class="footer-icon icon-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><a href="https://www.facebook.com/PPMspecial/" target="_blank">PPM Special</a></li>
                 <li><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:nattamon.s@ppmspecial.com">nattamon.s@ppmspecial.com</a></li>
             </ul>
         </div>
@@ -340,60 +480,148 @@
 <script>
     const translations = {
         th: {
-            nav_logo: "หจก. พีพีเอ็ม สเปเชียล", nav_about: "เกี่ยวกับเรา", nav_ops: "การปฏิบัติงาน", nav_projects: "ผลงานอ้างอิง", nav_contact: "ติดต่อเรา",
+            nav_logo: "หจก. พีพีเอ็ม สเปเชียล", 
+            nav_about: "เกี่ยวกับเรา", 
+            nav_service: "บริการของเรา", 
+            nav_ops: "การปฏิบัติงาน", 
+            nav_projects: "ผลงานอ้างอิง", 
+            nav_contact: "ติดต่อเรา",
             hero_title: "รับเหมาติดตั้งและวางระบบท่อก๊าซธรรมชาติ และท่อน้ำมัน<br><span>PPM Special</span>",
-            about_exp: "ตั้งแต่ปี 2552", about_title: "ประวัติและความเป็นมา",
-            about_p1: "หจก. พีพีเอ็ม สเปเชียล เชี่ยวชาญงานวิศวกรรมติดตั้งระบบก๊าซธรรมชาติครบวงจร โดยมุ่งเน้นการดำเนินงานตามมาตรฐานสากล และความปลอดภัยสูงสุดเป็นสำคัญ",
-            about_p2: "เราได้รับความไว้วางใจ ให้เป็นส่วนหนึ่งของโครงการโครงสร้างพื้นฐานระดับประเทศอย่างต่อเนื่อง ด้วยทีมงานมืออาชีพที่พร้อมส่งมอบงานคุณภาพ ตรงต่อเวลา และตอบโจทย์ความต้องการของกลุ่มลูกค้าอุตสาหกรรมพลังงานชั้นนำ",
-            stat_capital: "ทุนจดทะเบียน (Registered Capital)", stat_experience: "ประสบการณ์การทำงาน (Years Experience)",
+            
+            about_exp: "ตั้งแต่ปี 2552",
+            stat_capital: "ทุนจดทะเบียน (Registered Capital)",
+            stat_experience: "ประสบการณ์การทำงาน (Years Experience)",
+
+            history_title: "ประวัติความเป็นมา",
+            history_p1: "ห้างหุ้นส่วนจำกัด พีพีเอ็ม สเปเชียล ก่อตั้งขึ้นในปี พ.ศ. 2552 โดยคุณสมพงษ์ สุขสมบูรณ์ มุ่งเน้นดำเนินธุรกิจรับเหมาก่อสร้าง และวางระบบท่อส่งแก๊สธรรมชาติ และท่อน้ำมันแบบครบวงจร ด้วยศักยภาพของผู้บริหาร ประสิทธิภาพของทีมงาน ตลอดจนผลงานอันเป็นที่ประจักษ์ พีพีเอ็มจึงได้รับความไว้วางใจจากลูกค้าให้ดูแลโครงการที่ขยายตัวเพิ่มขึ้นอย่างต่อเนื่อง จนก้าวสู่การเป็นผู้เชี่ยวชาญที่มีชื่อเสียงและได้รับความน่าเชื่อถือในวงการ",
+            history_p2: "ปัจจุบันแม้โครงสร้างการบริหารจะส่งต่อมายังคุณนัทธมน สุขสมบูรณ์ แต่พีพีเอ็มยังคงรักษามาตรฐานและนโยบายคุณภาพเดิมไว้อย่างเหนียวแน่น",
+            history_p3: "ท่ามกลางการแข่งขันสูงในปัจจุบัน พีพีเอ็มยังคงมุ่งมั่นสร้างสรรค์ผลงานที่เป็นเลิศ ควบคุมคุณภาพเข้มงวดทุกขั้นตอน เพื่อตอบสนองความพึงพอใจสูงสุดของลูกค้าเสมอมา",
+            
+            vision_title: "วิสัยทัศน์",
+            vision_desc: "มุ่งสู่การเป็นผู้นำด้านงานรับเหมาวางระบบท่อส่งแก๊สธรรมชาติ และท่อน้ำมันระดับแนวหน้า ที่ขับเคลื่อนด้วยทีมงานมืออาชีพ และการบริการที่เป็นเลิศ เพื่อการเติบโตอย่างยั่งยืนร่วมกับคู่ค้า",
+            mission_title: "พันธกิจ",
+            mission_desc: "สร้างความพึงพอใจสูงสุดแก่ลูกค้า ผ่านการบริหารจัดการโครงการอย่างมืออาชีพ ตรงต่อเวลา และซื่อสัตย์ต่อสัญญา มุ่งเน้นความสัมพันธ์ระยะยาว",
+            
+            svc_main_title: "บริการของเรา (Our Service)",
+            svc_1_title: "งานท่อและงานใต้ดิน (PIPELINE & UNDERGROUND WORK)",
+            svc_1_item1: "งานตอกชีทไพล์, ขุดเปิดหน้าดิน และขุดร่อง (SHEETPILE INSTALLATION, OPEN-CUT AND TRENCHING)",
+            svc_1_item2: "งานประกอบท่อ, เคลือบรอยต่อ และทดสอบรอยรั่ว (PIPELINE FABRICATION, JOINT COATING & HOLIDAY TEST)",
+            svc_1_item3: "งานทดสอบแรงดันน้ำ, ทำความสะอาด และชะล้าง (HYDROSTATIC TEST, CLEANING AND FLUSHING)",
+            
+            svc_2_title: "งานเดินท่อและสถานีวัด (PIPING & MRS)",
+            svc_2_item1: "งานขึ้นรูปและติดตั้งระบบท่อ (PIPING FABRICATION AND INSTALLATION)",
+            svc_2_item2: "งานสร้างและติดตั้งโครงรองรับท่อ (PIPE SUPPORT FABRICATION AND INSTALLATION)",
+            svc_2_item3: "งานติดตั้งชุดวัดและโครงสร้างหลังคา (METERING SKID & SHELTER INSTALLATION)",
+            svc_2_item4: "งานติดตั้งเครื่องจักรกล (MECHANICAL INSTALLATION)",
+            svc_2_item5: "งานโยธาและฐานรากสถานีวัด (CIVIL WORKS AND METERING FOUNDATIONS)",
+            
+            svc_3_title: "บริการอื่นๆ (OTHERS)",
+            svc_3_item1: "บริการจัดหาช่างเชื่อมที่ผ่านการรับรอง (MANPOWER SUPPLY, CERTIFIED WELDER)",
+            svc_3_item2: "บริการให้เช่าเครื่องจักร (MACHINERY FOR RENT)",
+            svc_3_item3: "เช่ารถขุดพร้อมคนขับ และรถบรรทุกพร้อมคนขับ (EXCAVATOR & TRUCK RENTAL WITH OPERATOR)",
+            svc_3_item4: "เช่าเครื่องตอกเสาเข็มระบบสั่น พร้อมทีมงาน (VIBRATORY HAMMER RENTAL WITH CREW)",
+            svc_3_item5: "งานเชื่อมเหล็กและสแตนเลสทั่วไป (GENERAL STEEL & STAINLESS WELDING)",
+            
+            fleet_title: "เครื่องจักรและยานพาหนะของเรา",
+            fleet_desc: "เรามีเครื่องจักรหนักที่พร้อมใช้งาน พร้อมพนักงานขับที่ผ่านการรับรองและทีมงานสนับสนุน เพื่อการดำเนินงานที่ราบรื่นและมีประสิทธิภาพ",
+            
             ops_title: "มาตรฐานการปฏิบัติงานและเครื่องจักร",
             ops_subtitle: "เราใช้เครื่องจักรเฉพาะทางและทีมงานที่เชี่ยวชาญ เพื่อความปลอดภัยและแม่นยำสูงสุด",
             v1_h: "Sheet Pile Driving", v1_p: "งานตอกเข็มเหล็กป้องกันดินสไลด์ด้วย Vibro PC300",
             v2_h: "Logistics & Transport", v2_p: "การขนย้ายท่อก๊าซธรรมชาติด้วยเครื่องจักรหนักอย่างปลอดภัย",
             v3_h: "Pipeline Installation", v3_p: "กระบวนการวางท่อลงร่องขุดตามมาตรฐานวิศวกรรม",
             play_hint: "ชี้เมาส์เพื่อเล่นวิดีโอ",
-            client_title: "ความไว้วางใจจากลูกค้า", prj_title: "โครงการอ้างอิง (Project References)",
+            client_title: "ความไว้วางใจจากลูกค้า", 
+            
+            prj_title: "โครงการอ้างอิง (Project References)",
             prj_instruction: "คลิกที่โครงการเพื่อดูรูปภาพเพิ่มเติม",
             prj_1_h: "การซ่อมแซมท่อส่งก๊าซ SN10", prj_2_h: "PTT BV10 Pig Receiving Project", prj_3_h: "BV20 Pressure Reduction Project",
             prj_4_h: "Bypass line SAI NOI Station", prj_5_h: "PTT NGV พี.เอ็น.ปิโตรเลียม", prj_6_h: "ปตท. เอ็นทีเอนเนอจี ก๊าซ",
             prj_7_h: "PTT BV1 MODIFICATION", prj_8_h: "BV 4.19 PIG Launcher/Receiver",
             prj_9_h: "ท่อส่งก๊าซสถานี OTS#2", prj_10_h: "METERING FOR DAIRY PLUS",
             prj_11_h: "Metering Station TOP SPP", prj_12_h: "Propane Metering Station",
-            footer_name: "หจก. พีพีเอ็ม สเปเชียล", footer_desc: "ผู้เชี่ยวชาญด้านระบบท่ออุตสาหกรรม คุณภาพ ปลอดภัย ส่งมอบตรงเวลา",
-            footer_srv_title: "บริการ", footer_contact_title: "ติดต่อเรา"
+            
+            footer_name: "หจก. พีพีเอ็ม สเปเชียล", 
+            footer_desc: "ผู้เชี่ยวชาญด้านระบบท่ออุตสาหกรรม คุณภาพ ปลอดภัย ส่งมอบตรงเวลา",
+            footer_srv_title: "บริการ", 
+            footer_contact_title: "ติดต่อเรา"
         },
         en: {
-            nav_logo: "PPM SPECIAL LIMITED PARTNERSHIP", nav_about: "About", nav_ops: "Operations", nav_projects: "References", nav_contact: "Contact",
+            nav_logo: "PPM SPECIAL", 
+            nav_about: "History", 
+            nav_service: "Services", 
+            nav_ops: "Operations", 
+            nav_projects: "References", 
+            nav_contact: "Contact",
             hero_title: "Natural Gas & Oil Pipeline Installation<br><span>PPM Special</span>",
-            about_exp: "Established 2009", about_title: "Company Profile",
-            about_p1: "PPM Special specializes in comprehensive natural gas engineering and installation, committed to international standards and the highest safety protocols.",
-            about_p2: "We are consistently trusted to execute national-scale infrastructure projects, delivering quality and on-time solutions that meet the rigorous demands of leading energy and industrial corporations.",
-            stat_capital: "Registered Capital", stat_experience: "Years of Excellence",
+            
+            about_exp: "Established 2009",
+            stat_capital: "Registered Capital",
+            stat_experience: "Years Experience",
+
+            history_title: "History",
+            history_p1: "Founded in 2009 by Mr. Somphong Suksomboon, PPM Special Limited Partnership is a premier contractor specializing in comprehensive oil and gas pipeline construction and installation services. Driven by visionary leadership, highly skilled teams, and a proven track record, the company has consistently earned the trust of clients to execute increasingly expanding projects—solidifying its reputation as a highly respected industry expert.",
+            history_p2: "Today, under the executive leadership of Ms. Nattamon Suksomboon, PPM remains steadfast in upholding the core values, high standards, and foundational policies established by Mr. Somphong S.",
+            history_p3: "Amidst a highly competitive market landscape, PPM continues its unwavering commitment to delivering excellence and total client satisfaction through rigorous quality control at every stage.",
+            
+            vision_title: "VISION",
+            vision_desc: "To stand as a leading energy pipeline contractor, delivering professional execution and outstanding service to achieve sustainable long-term success together with our business partners.",
+            mission_title: "MISSION",
+            mission_desc: "To achieve total client satisfaction by delivering professional project management, strict adherence to timelines, and utmost contractual integrity to build lasting relationships.",
+            
+            svc_main_title: "Our Service",
+            svc_1_title: "PIPELINE & UNDERGROUND WORK",
+            svc_1_item1: "SHEETPILE INSTALLATION PIT, OPENC-CUT AND TENCHING WORK",
+            svc_1_item2: "PIPELINE FABRICATION, FIELD JOINT COATING AND HOLIDAY TEST",
+            svc_1_item3: "PIPELINE HYDROSTATIC TEST, CLEANING AND FLUSHING",
+            
+            svc_2_title: "PIPING & MRS",
+            svc_2_item1: "PIPING FABRICATION AND INSTALLATION",
+            svc_2_item2: "PIPE SUPPORT FABRICATION AND INSTALLATION",
+            svc_2_item3: "METERING SKID & SHELTER FABRICATION INSTALLATION",
+            svc_2_item4: "MECHANICAL INSTALLATION",
+            svc_2_item5: "CIVIL WORKS AND METERING FOUNDATIONS",
+            
+            svc_3_title: "OTHERS",
+            svc_3_item1: "MANPOWER SUPPLY, CERTIFICATED WELDER",
+            svc_3_item2: "MACHINERY FOR RENT",
+            svc_3_item3: "EXCAVATOR RENTAL WITH OPERATOR AND TRUCK RENTAL WITH DRIVER",
+            svc_3_item4: "VIBRATORY HAMMER/ PILE DRIVER RENTAL WITH OPERATOR & SUPPORT CREW",
+            svc_3_item5: "GENERAL STEEL & STAINLESS STEEL WELDING SERVICES",
+            
+            fleet_title: "Our Fleet & Machinery",
+            fleet_desc: "We maintain a fleet of reliable heavy machinery complete with certified operators and ground support crews ready to execute projects seamlessly and efficiently.",
+            
             ops_title: "Operational Excellence & Machinery",
             ops_subtitle: "Utilizing specialized equipment and expert teams for maximum safety and precision",
             v1_h: "Sheet Pile Driving", v1_p: "Steel sheet pile installation using Vibro PC300",
             v2_h: "Logistics & Transport", v2_p: "Safe transportation of natural gas pipes using heavy machinery",
             v3_h: "Pipeline Installation", v3_p: "Precision pipe lowering process following engineering standards",
             play_hint: "MOUSE OVER TO PLAY",
-            client_title: "Trusted by Our Clients", prj_title: "Project References",
+            client_title: "Trusted by Our Clients", 
+            
+            prj_title: "Project References",
             prj_instruction: "Click on project to view gallery",
             prj_1_h: "Pipeline repair at SN10 Station", prj_2_h: "PTT BV10 Pig Receiving Project", prj_3_h: "BV20 Pressure Reduction Project",
             prj_4_h: "Bypass line at SAI NOI Station", prj_5_h: "PTT NGV P.N. Petroleum", prj_6_h: "PTT NTN Energy Gas Station",
             prj_7_h: "PTT BV1 MODIFICATION", prj_8_h: "BV 4.19 PIG Launcher/Receiver",
             prj_9_h: "Pipeline at OTS#2 Station", prj_10_h: "METERING FOR DAIRY PLUS",
             prj_11_h: "Metering Station TOP SPP", prj_12_h: "Propane Metering Station",
-            footer_name: "PPM SPECIAL LIMITED PARTNERSHIP", footer_desc: "Industrial piping specialists. Quality, safety, and on-time delivery.",
-            footer_srv_title: "Services", footer_contact_title: "Contact Us"
+            
+            footer_name: "PPM SPECIAL LIMITED PARTNERSHIP", 
+            footer_desc: "Industrial piping specialists. Quality, safety, and on-time delivery.",
+            footer_srv_title: "Services", 
+            footer_contact_title: "Contact Us"
         }
     };
-
+    
     let currentLang = 'th';
     function setLanguage(lang) {
         currentLang = lang;
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.innerText.toLowerCase() === lang));
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (translations[lang][key]) el.innerHTML = translations[lang][key];
+            if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
         });
     }
 
@@ -412,63 +640,39 @@
         document.getElementById('lbCaption').innerText = translations[currentLang][currentTitleKey] || "Project Reference";
     }
 
-    // --- Smart Video Logic (Fixed for Desktop Simultaneous Play) ---
+    // --- Smart Video Logic ---
     const videos = document.querySelectorAll('.op-video');
     const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-
-    // ระบบป้องกัน: สั่งหยุดวิดีโอทันทีที่โหลดหน้าเสร็จ (บางเบราว์เซอร์อาจพยายามเล่นเอง)
     window.addEventListener('load', () => {
-        videos.forEach(v => {
-            v.pause();
-            v.currentTime = 0;
-        });
+        videos.forEach(v => { v.pause(); v.currentTime = 0; });
     });
-
     if (isDesktop) {
-        // --- 1. สำหรับคอมพิวเตอร์: เล่นเฉพาะเมื่อเอาเมาส์ชี้เท่านั้น ---
         videos.forEach(video => {
             const card = video.closest('.video-card');
-            
-            // ปิดระบบ Observer สำหรับ Desktop เพื่อไม่ให้เล่นพร้อมกัน
-            card.addEventListener('mouseenter', () => {
-                video.play();
-                card.classList.add('playing');
-            });
-            card.addEventListener('mouseleave', () => {
-                video.pause();
-                card.classList.remove('playing');
-            });
+            card.addEventListener('mouseenter', () => { video.play(); card.classList.add('playing'); });
+            card.addEventListener('mouseleave', () => { video.pause(); card.classList.remove('playing'); });
         });
     } else {
-        // --- 2. สำหรับมือถือ: เล่นเมื่อเลื่อนมาถึงกึ่งกลางจอ ---
         const observerOptions = { root: null, threshold: 0.7 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const video = entry.target;
                 const card = video.closest('.video-card');
-                if (entry.isIntersecting) {
-                    video.play();
-                    card.classList.add('playing');
-                } else {
-                    video.pause();
-                    card.classList.remove('playing');
-                }
+                if (entry.isIntersecting) { video.play(); card.classList.add('playing'); } 
+                else { video.pause(); card.classList.remove('playing'); }
             });
         }, observerOptions);
         videos.forEach(video => observer.observe(video));
     }
 
-    // Navbar Scroll Effect
+    // --- Navbar Scroll ---
     window.addEventListener('scroll', () => {
         const nav = document.getElementById('navbar');
         nav.classList.toggle('scrolled', window.scrollY > 50);
     });
-
-    // Disable Right Click on Video Overlays
     document.querySelectorAll('.video-overlay').forEach(overlay => {
         overlay.addEventListener('contextmenu', e => e.preventDefault());
     });
 </script>
-
 </body>
 </html>
