@@ -74,7 +74,7 @@
         .vm-item p { font-size: 1.15rem; line-height: 1.8; opacity: 0.95; text-align: left; }
 
         /* --- Our Service --- */
-        .service-category { margin-bottom: 70px; }
+        .service-category { margin-bottom: 70px; scroll-margin-top: 100px; } 
         .service-header { display: inline-block; background-color: var(--color-accent); color: white; padding: 15px 40px; font-size: 1.3rem; font-weight: 700; margin-bottom: 30px; border-radius: 4px; }
         .service-list { list-style: none; margin-bottom: 40px; }
         .service-list li { font-size: 1.1rem; font-weight: 600; color: var(--color-primary); margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px; text-transform: uppercase; }
@@ -140,7 +140,7 @@
         .footer-list { list-style: none; padding: 0; }
         .footer-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 12px; }
         .footer-list a { color: #a0aec0; text-decoration: none; transition: 0.3s; }
-        .footer-icon { width: 20px; height: 20px; fill: currentColor; }
+        .footer-icon { width: 22px; height: 22px; fill: currentColor; flex-shrink: 0; }
         
         @keyframes zoom { from {transform:scale(0)} to {transform:scale(1)} }
         @media (max-width: 992px) { .about-container { grid-template-columns: 1fr; gap: 40px; } }
@@ -225,16 +225,16 @@
 <!-- Our Service Section -->
 <section class="section" id="services">
     <div class="section-title">
-        <h2 data-i18n="svc_main_title">Our Service</h2>
+        <h2 data-i18n="svc_main_title">บริการของเรา (Our Service)</h2>
     </div>
 
     <!-- Service 1 -->
-    <div class="service-category">
-        <div class="service-header" data-i18n="svc_1_title">PIPELINE & UNDERGROUND WORK</div>
+    <div class="service-category" id="service-pipeline">
+        <div class="service-header" data-i18n="svc_1_title">งานท่อและงานใต้ดิน (PIPELINE & UNDERGROUND WORK)</div>
         <ul class="service-list">
-            <li data-i18n="svc_1_item1">SHEETPILE INSTALLATION PIT, OPENC-CUT AND TENCHING WORK</li>
-            <li data-i18n="svc_1_item2">PIPELINE FABRICATION, FIELD JOINT COATING AND HOLIDAY TEST</li>
-            <li data-i18n="svc_1_item3">PIPELINE HYDROSTATIC TEST, CLEANING AND FLUSHING</li>
+            <li data-i18n="svc_1_item1">งานตอกชีทไพล์, ขุดเปิดหน้าดิน และขุดร่อง (SHEETPILE INSTALLATION, OPEN-CUT AND TRENCHING)</li>
+            <li data-i18n="svc_1_item2">งานประกอบท่อ, เคลือบรอยต่อ และทดสอบรอยรั่ว (PIPELINE FABRICATION, JOINT COATING & HOLIDAY TEST)</li>
+            <li data-i18n="svc_1_item3">งานทดสอบแรงดันน้ำ, ทำความสะอาด และชะล้าง (HYDROSTATIC TEST, CLEANING AND FLUSHING)</li>
         </ul>
         <div class="service-gallery">
             <img src="images/service_pipeline_1.jpg" alt="Pipeline Work">
@@ -244,14 +244,14 @@
     </div>
 
     <!-- Service 2 -->
-    <div class="service-category">
-        <div class="service-header" data-i18n="svc_2_title">PIPING & MRS</div>
+    <div class="service-category" id="service-piping">
+        <div class="service-header" data-i18n="svc_2_title">งานเดินท่อและสถานีวัด (PIPING & MRS)</div>
         <ul class="service-list">
-            <li data-i18n="svc_2_item1">PIPING FABRICATION AND INSTALLATION</li>
-            <li data-i18n="svc_2_item2">PIPE SUPPORT FABRICATION AND INSTALLATION</li>
-            <li data-i18n="svc_2_item3">METERING SKID & SHELTER FABRICATION INSTALLATION</li>
-            <li data-i18n="svc_2_item4">MECHANICAL INSTALLATION</li>
-            <li data-i18n="svc_2_item5">CIVIL WORKS AND METERING FOUNDATIONS</li>
+            <li data-i18n="svc_2_item1">งานขึ้นรูปและติดตั้งระบบท่อ (PIPING FABRICATION AND INSTALLATION)</li>
+            <li data-i18n="svc_2_item2">งานสร้างและติดตั้งโครงรองรับท่อ (PIPE SUPPORT FABRICATION AND INSTALLATION)</li>
+            <li data-i18n="svc_2_item3">งานติดตั้งชุดวัดและโครงสร้างหลังคา (METERING SKID & SHELTER INSTALLATION)</li>
+            <li data-i18n="svc_2_item4">งานติดตั้งเครื่องจักรกล (MECHANICAL INSTALLATION)</li>
+            <li data-i18n="svc_2_item5">งานโยธาและฐานรากสถานีวัด (CIVIL WORKS AND METERING FOUNDATIONS)</li>
         </ul>
         <div class="service-gallery">
             <img src="images/service_piping_1.jpg" alt="Piping Work">
@@ -261,14 +261,14 @@
     </div>
 
     <!-- Service 3 -->
-    <div class="service-category">
-        <div class="service-header" data-i18n="svc_3_title">OTHERS</div>
+    <div class="service-category" id="service-others">
+        <div class="service-header" data-i18n="svc_3_title">บริการอื่นๆ (OTHERS)</div>
         <ul class="service-list">
-            <li data-i18n="svc_3_item1">MANPOWER SUPPLY, CERTIFICATED WELDER</li>
-            <li data-i18n="svc_3_item2">MACHINERY FOR RENT</li>
-            <li data-i18n="svc_3_item3">EXCAVATOR RENTAL WITH OPERATOR AND TRUCK RENTAL WITH DRIVER</li>
-            <li data-i18n="svc_3_item4">VIBRATORY HAMMER/ PILE DRIVER RENTAL WITH OPERATOR & SUPPORT CREW</li>
-            <li data-i18n="svc_3_item5">GENERAL STEEL & STAINLESS STEEL WELDING SERVICES</li>
+            <li data-i18n="svc_3_item1">บริการจัดหาช่างเชื่อมที่ผ่านการรับรอง (MANPOWER SUPPLY, CERTIFIED WELDER)</li>
+            <li data-i18n="svc_3_item2">บริการให้เช่าเครื่องจักร (MACHINERY FOR RENT)</li>
+            <li data-i18n="svc_3_item3">เช่ารถขุดพร้อมคนขับ และรถบรรทุกพร้อมคนขับ (EXCAVATOR & TRUCK RENTAL WITH OPERATOR)</li>
+            <li data-i18n="svc_3_item4">เช่าเครื่องตอกเสาเข็มระบบสั่น พร้อมทีมงาน (VIBRATORY HAMMER RENTAL WITH CREW)</li>
+            <li data-i18n="svc_3_item5">งานเชื่อมเหล็กและสแตนเลสทั่วไป (GENERAL STEEL & STAINLESS WELDING)</li>
         </ul>
         <div class="service-gallery">
             <img src="images/service_others_1.jpg" alt="Other Services">
@@ -281,31 +281,31 @@
 <!-- Our Fleet & Machinery -->
 <section class="section fleet-section">
     <div class="section-title">
-        <h2 data-i18n="fleet_title">Our Fleet & Machinery</h2>
+        <h2 data-i18n="fleet_title">เครื่องจักรและยานพาหนะของเรา</h2>
     </div>
-    <p class="fleet-desc" data-i18n="fleet_desc">We maintain a fleet of reliable heavy machinery complete with certified operators and ground support crews ready to execute projects seamlessly and efficiently.</p>
+    <p class="fleet-desc" data-i18n="fleet_desc">เรามีเครื่องจักรหนักที่พร้อมใช้งาน พร้อมพนักงานขับที่ผ่านการรับรองและทีมงานสนับสนุน เพื่อการดำเนินงานที่<span style="white-space: nowrap;">ราบรื่น</span>และมีประสิทธิภาพ</p>
     
     <div class="fleet-list">
         <div class="fleet-item">
-            <div class="fleet-name">EXCAVATORS</div>
-            <div class="fleet-details">PC40 <span class="highlight-unit">1 Unit</span>, PC128 <span class="highlight-unit">1 Unit</span> and PC200 <span class="highlight-unit">1 Unit</span></div>
+            <div class="fleet-name" data-i18n="fleet_excavator">รถขุด (EXCAVATORS)</div>
+            <div class="fleet-details" data-i18n="fleet_excavator_detail">PC40 <span class="highlight-unit">1 คัน</span>, PC128 <span class="highlight-unit">1 คัน</span> และ PC200 <span class="highlight-unit">1 คัน</span></div>
         </div>
         <div class="fleet-item">
-            <div class="fleet-name">VIBRO HAMMERS</div>
-            <div class="fleet-details">PC300 <span class="highlight-unit">1 Unit</span></div>
+            <div class="fleet-name" data-i18n="fleet_vibro">เครื่องตอกเสาเข็มระบบสั่น (VIBRO HAMMERS)</div>
+            <div class="fleet-details" data-i18n="fleet_vibro_detail">PC300 <span class="highlight-unit">1 เครื่อง</span></div>
         </div>
         <div class="fleet-item">
-            <div class="fleet-name">VEHICLES & TRUCKS</div>
-            <div class="fleet-details">
-                6-Wheel Dump Truck <span class="highlight-unit">1 Unit</span><br>
-                6-Wheel Boom Truck <span class="highlight-unit">1 Unit</span><br>
-                12-Wheel Lowbed Trailer <span class="highlight-unit">1 Unit</span><br>
-                Tractor Head with Semi-Trailer <span class="highlight-unit">1 Unit</span>
+            <div class="fleet-name" data-i18n="fleet_trucks">ยานพาหนะและรถบรรทุก (VEHICLES & TRUCKS)</div>
+            <div class="fleet-details" data-i18n="fleet_trucks_detail">
+                รถบรรทุกดัมพ์ 6 ล้อ <span class="highlight-unit">1 คัน</span><br>
+                รถบรรทุกติดเครน 6 ล้อ <span class="highlight-unit">1 คัน</span><br>
+                รถบรรทุกโลวเบด 12 ล้อ <span class="highlight-unit">1 คัน</span><br>
+                รถหัวลากพร้อมหางเทรลเลอร์ <span class="highlight-unit">1 คัน</span>
             </div>
         </div>
         <div class="fleet-item">
-            <div class="fleet-name">AUXILIARY EQUIPMENT</div>
-            <div class="fleet-details">Generators, Welders, Compaction Equipment, Holiday Detector and others</div>
+            <div class="fleet-name" data-i18n="fleet_aux">อุปกรณ์สนับสนุน (AUXILIARY EQUIPMENT)</div>
+            <div class="fleet-details" data-i18n="fleet_aux_detail">เครื่องกำเนิดไฟฟ้า, เครื่องเชื่อม, อุปกรณ์บดอัด, เครื่องตรวจจับรอยรั่ว และอื่นๆ</div>
         </div>
     </div>
 </section>
@@ -455,19 +455,23 @@
         <div>
             <h4 style="color:#fff; margin-bottom: 20px;" data-i18n="footer_srv_title">บริการ</h4>
             <ul class="footer-list">
-                <!-- แก้ไขหัวข้อบริการให้ตรงกับหมวดหมู่ด้านบน -->
-                <li><a href="#services" data-i18n="footer_srv_1">งานท่อและงานใต้ดิน</a></li>
-                <li><a href="#services" data-i18n="footer_srv_2">งานเดินท่อและสถานีวัด</a></li>
-                <li><a href="#services" data-i18n="footer_srv_3">บริการอื่นๆ และเครื่องจักร</a></li>
+                <li><a href="#service-pipeline" data-i18n="footer_srv_1">งานท่อและงานใต้ดิน</a></li>
+                <li><a href="#service-piping" data-i18n="footer_srv_2">งานเดินท่อและสถานีวัด</a></li>
+                <li><a href="#service-others" data-i18n="footer_srv_3">บริการอื่นๆ และเครื่องจักร</a></li>
             </ul>
         </div>
         <div>
             <h4 style="color:#fff; margin-bottom: 20px;" data-i18n="footer_contact_title">ติดต่อเรา</h4>
             <ul class="footer-list">
                 <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:038565168">038-565-168</a></li>
-                <li><svg class="footer-icon icon-line" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-4.369-4.305-7.923-9.591-7.923-5.285 0-9.589 3.554-9.589 7.923 0 3.914 3.411 7.185 8.016 7.828.311.066.735.206.842.473.123.307.081.787.039 1.096l-.168.99c-.051.306-.245 1.196 1.053.652 1.298-.544 7.009-4.128 9.553-7.062.593-.728.845-1.428.845-1.977z"/></svg><a href="https://line.me/ti/p/@ppmspecial" target="_blank">@ppmspecial</a></li>
-                <li><svg class="footer-icon icon-messenger" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.16 5.49 3.08 7.4.15.15.24.36.25.58l.04 1.97c.01.55.57.92 1.08.71l2.18-.91c.18-.08.38-.09.56-.04.88.24 1.81.37 2.81.37 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2z"/></svg><a href="https://m.me/PPMspecial" target="_blank">PPMspecial</a></li>
-                <li><svg class="footer-icon icon-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><a href="https://www.facebook.com/PPMspecial/" target="_blank">PPM Special</a></li>
+                
+                <!-- SVG ไอคอน LINE Official Account (โล่ดาว) แบบชัดเจน 100% -->
+                <li><svg class="footer-icon" viewBox="0 0 512 512" fill="currentColor"><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm97.7 206.1c-6.1 19.1-13.6 37.8-22.1 55.7l16.1 53.6c3.2 10.6-5.8 20.3-15.8 17l-51.5-16.9c-7.9 3.5-16 6.7-24.4 9.4V380c0 9.8-7.9 17.7-17.7 17.7h-20.6c-9.8 0-17.7-7.9-17.7-17.7v-55.2c-8.4-2.7-16.6-5.9-24.4-9.4l-51.5 16.9c-10 3.3-19-6.4-15.8-17l16.1-53.6c-8.5-17.9-16-36.6-22.1-55.7l-47.5 12c-10.4 2.6-18.4-8.8-14.1-18.2l25.8-56.7c-2.4-8.8-3.7-18.1-3.7-27.6 0-59.2 48-107.2 107.2-107.2s107.2 48 107.2 107.2c0 9.6-1.3 18.8-3.7 27.6l25.8 56.7c4.3 9.4-3.7 20.8-14.1 18.2l-47.5-12zM256 166.4c-24.7 0-44.8 20.1-44.8 44.8 0 24.7 20.1 44.8 44.8 44.8 24.7 0 44.8-20.1 44.8-44.8 0-24.7-20.1-44.8-44.8-44.8z"/></svg><a href="https://line.me/ti/p/@ppmspecial" target="_blank">@ppmspecial</a></li>
+                
+                <!-- SVG ไอคอน Messenger ลูกโป่งสายฟ้าแท้ -->
+                <li><svg class="footer-icon icon-messenger" viewBox="0 0 512 512" fill="currentColor"><path d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.81c52.05-23.35 53.69-25.14 62.59-22.73 23.73 6.43 50.12 9.92 76.13 9.92C400.08 489.14 504 386.85 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z"/></svg><a href="https://m.me/PPMspecial" target="_blank">PPMspecial</a></li>
+                
+                <li><svg class="footer-icon icon-facebook" viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg><a href="https://www.facebook.com/PPMspecial/" target="_blank">PPM Special</a></li>
                 <li><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:nattamon.s@ppmspecial.com">nattamon.s@ppmspecial.com</a></li>
             </ul>
         </div>
@@ -522,6 +526,14 @@
             
             fleet_title: "เครื่องจักรและยานพาหนะของเรา",
             fleet_desc: "เรามีเครื่องจักรหนักที่พร้อมใช้งาน พร้อมพนักงานขับที่ผ่านการรับรองและทีมงานสนับสนุน เพื่อการดำเนินงานที่<span style=\"white-space: nowrap;\">ราบรื่น</span>และมีประสิทธิภาพ",
+            fleet_excavator: "รถขุด (EXCAVATORS)",
+            fleet_excavator_detail: "PC40 <span class='highlight-unit'>1 คัน</span>, PC128 <span class='highlight-unit'>1 คัน</span> และ PC200 <span class='highlight-unit'>1 คัน</span>",
+            fleet_vibro: "เครื่องตอกเสาเข็มระบบสั่น (VIBRO HAMMERS)",
+            fleet_vibro_detail: "PC300 <span class='highlight-unit'>1 เครื่อง</span>",
+            fleet_trucks: "ยานพาหนะและรถบรรทุก (VEHICLES & TRUCKS)",
+            fleet_trucks_detail: "รถบรรทุกดัมพ์ 6 ล้อ <span class='highlight-unit'>1 คัน</span><br>รถบรรทุกติดเครน 6 ล้อ <span class='highlight-unit'>1 คัน</span><br>รถบรรทุกโลวเบด 12 ล้อ <span class='highlight-unit'>1 คัน</span><br>รถหัวลากพร้อมหางเทรลเลอร์ <span class='highlight-unit'>1 คัน</span>",
+            fleet_aux: "อุปกรณ์สนับสนุน (AUXILIARY EQUIPMENT)",
+            fleet_aux_detail: "เครื่องกำเนิดไฟฟ้า, เครื่องเชื่อม, อุปกรณ์บดอัด, เครื่องตรวจจับรอยรั่ว และอื่นๆ",
             
             ops_title: "มาตรฐานการปฏิบัติงานและเครื่องจักร",
             ops_subtitle: "เราใช้เครื่องจักรเฉพาะทางและทีมงานที่เชี่ยวชาญ เพื่อความปลอดภัยและแม่นยำสูงสุด",
@@ -563,7 +575,7 @@
             history_title: "History",
             history_p1: "Founded in 2009 by Mr. Somphong Suksomboon, PPM Special Limited Partnership is a premier contractor specializing in comprehensive oil and gas pipeline construction and installation services. Driven by visionary leadership, highly skilled teams, and a proven track record, the company has consistently earned the trust of clients to execute increasingly expanding projects—solidifying its reputation as a highly respected industry expert.",
             history_p2: "Today, under the executive leadership of Ms. Nattamon Suksomboon, PPM remains steadfast in upholding the core values, high standards, and foundational policies established by Mr. Somphong S.",
-            history_p3: "Amidst a highly competitive market landscape, PPM continues its unwavering commitment to delivering excellence and total client satisfaction through rigorous quality control at every stage.",
+            history_p3: "Amidst a highly competitive market landscape, PPM continues unwavering commitment to delivering excellence and total client satisfaction through rigorous quality control at every stage.",
             
             vision_title: "VISION",
             vision_desc: "To stand as a leading energy pipeline contractor, delivering professional execution and outstanding service to achieve sustainable long-term success together with our business partners.",
@@ -592,6 +604,14 @@
             
             fleet_title: "Our Fleet & Machinery",
             fleet_desc: "We maintain a fleet of reliable heavy machinery complete with certified operators and ground support crews ready to execute projects seamlessly and efficiently.",
+            fleet_excavator: "EXCAVATORS",
+            fleet_excavator_detail: "PC40 <span class='highlight-unit'>1 Unit</span>, PC128 <span class='highlight-unit'>1 Unit</span> and PC200 <span class='highlight-unit'>1 Unit</span>",
+            fleet_vibro: "VIBRO HAMMERS",
+            fleet_vibro_detail: "PC300 <span class='highlight-unit'>1 Unit</span>",
+            fleet_trucks: "VEHICLES & TRUCKS",
+            fleet_trucks_detail: "6-Wheel Dump Truck <span class='highlight-unit'>1 Unit</span><br>6-Wheel Boom Truck <span class='highlight-unit'>1 Unit</span><br>12-Wheel Lowbed Trailer <span class='highlight-unit'>1 Unit</span><br>Tractor Head with Semi-Trailer <span class='highlight-unit'>1 Unit</span>",
+            fleet_aux: "AUXILIARY EQUIPMENT",
+            fleet_aux_detail: "Generators, Welders, Compaction Equipment, Holiday Detector and others",
             
             ops_title: "Operational Excellence & Machinery",
             ops_subtitle: "Utilizing specialized equipment and expert teams for maximum safety and precision",
@@ -628,6 +648,11 @@
             if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
         });
     }
+
+    // --- บังคับให้โหลดภาษาไทยเป็นค่าเริ่มต้นทันทีที่เข้าเว็บ ---
+    window.addEventListener('DOMContentLoaded', () => {
+        setLanguage('th');
+    });
 
     // --- Lightbox Logic ---
     let currentProjectId = ""; let currentIndex = 1; let currentMaxImages = 0; let currentTitleKey = "";
