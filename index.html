@@ -61,7 +61,6 @@
         .about-text { max-width: 680px; }
         .experience-badge { background: var(--color-accent); color: white; display: inline-block; padding: 8px 20px; border-radius: 6px; font-weight: 600; margin-bottom: 25px; letter-spacing: 0.5px; font-size: 0.9rem; }
         .about-text h2 { font-size: 2.8rem; color: var(--color-primary); margin-bottom: 30px; font-weight: 700; line-height: 1.1; }
-        /* แก้ไขการจัดเรียงข้อความตรงนี้ ให้เป็นชิดซ้าย (left) เพื่อไม่ให้มีช่องว่างห่างๆ */
         .about-text p { margin-bottom: 20px; line-height: 1.8; color: var(--color-text-light); font-size: 1.1rem; text-align: left; }
         .about-stats-card { background: #fff; padding: 45px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.03); }
         .stat-item h3 { color: var(--color-accent); font-size: 2.5rem; margin-bottom: 8px; }
@@ -72,7 +71,6 @@
         .vm-container { max-width: 800px; margin: 0 auto; }
         .vm-item { margin-bottom: 40px; }
         .vm-item h3 { color: #4db3ff; font-size: 2rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        /* แก้ไขการจัดเรียงข้อความตรงนี้ ให้เป็นชิดซ้ายเช่นกัน */
         .vm-item p { font-size: 1.15rem; line-height: 1.8; opacity: 0.95; text-align: left; }
 
         /* --- Our Service --- */
@@ -457,10 +455,10 @@
         <div>
             <h4 style="color:#fff; margin-bottom: 20px;" data-i18n="footer_srv_title">บริการ</h4>
             <ul class="footer-list">
-                <li><a href="#services">Piping Installation</a></li>
-                <li><a href="#services">Mechanical Work</a></li>
-                <li><a href="#services">Flushing & Testing</a></li>
-                <li><a href="#services">Structure Fabrication</a></li>
+                <!-- แก้ไขหัวข้อบริการให้ตรงกับหมวดหมู่ด้านบน -->
+                <li><a href="#services" data-i18n="footer_srv_1">งานท่อและงานใต้ดิน</a></li>
+                <li><a href="#services" data-i18n="footer_srv_2">งานเดินท่อและสถานีวัด</a></li>
+                <li><a href="#services" data-i18n="footer_srv_3">บริการอื่นๆ และเครื่องจักร</a></li>
             </ul>
         </div>
         <div>
@@ -523,7 +521,7 @@
             svc_3_item5: "งานเชื่อมเหล็กและสแตนเลสทั่วไป (GENERAL STEEL & STAINLESS WELDING)",
             
             fleet_title: "เครื่องจักรและยานพาหนะของเรา",
-            fleet_desc: "เรามีเครื่องจักรหนักที่พร้อมใช้งาน พร้อมพนักงานขับที่ผ่านการรับรองและทีมงานสนับสนุน เพื่อการดำเนินงานที่ราบรื่นและมีประสิทธิภาพ",
+            fleet_desc: "เรามีเครื่องจักรหนักที่พร้อมใช้งาน พร้อมพนักงานขับที่ผ่านการรับรองและทีมงานสนับสนุน เพื่อการดำเนินงานที่<span style=\"white-space: nowrap;\">ราบรื่น</span>และมีประสิทธิภาพ",
             
             ops_title: "มาตรฐานการปฏิบัติงานและเครื่องจักร",
             ops_subtitle: "เราใช้เครื่องจักรเฉพาะทางและทีมงานที่เชี่ยวชาญ เพื่อความปลอดภัยและแม่นยำสูงสุด",
@@ -544,6 +542,9 @@
             footer_name: "หจก. พีพีเอ็ม สเปเชียล", 
             footer_desc: "ผู้เชี่ยวชาญด้านระบบท่ออุตสาหกรรม คุณภาพ ปลอดภัย ส่งมอบตรงเวลา",
             footer_srv_title: "บริการ", 
+            footer_srv_1: "งานท่อและงานใต้ดิน",
+            footer_srv_2: "งานเดินท่อและสถานีวัด",
+            footer_srv_3: "บริการอื่นๆ และเครื่องจักร",
             footer_contact_title: "ติดต่อเรา"
         },
         en: {
@@ -611,6 +612,9 @@
             footer_name: "PPM SPECIAL LIMITED PARTNERSHIP", 
             footer_desc: "Industrial piping specialists. Quality, safety, and on-time delivery.",
             footer_srv_title: "Services", 
+            footer_srv_1: "Pipeline & Underground Work",
+            footer_srv_2: "Piping & MRS",
+            footer_srv_3: "Other Services & Machinery",
             footer_contact_title: "Contact Us"
         }
     };
